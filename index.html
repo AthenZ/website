@@ -141,14 +141,14 @@
         <div class="row">
 
                 <h2 class="section-heading text-center">Providing RBAC for your needs</h2>
-         <p><div class="row text-center">Athenz is a set of services and libraries supporting role-based authorization (RBAC) for provisioning and configuration (centralized authorization) use cases as well as serving/runtime (decentralized authorization) use cases to handle on-box enforcement.</div></p>
+         <div class="row text-center"><p>Athenz is a set of services and libraries supporting role-based authorization (RBAC) for provisioning and configuration (centralized authorization) use cases as well as serving/runtime (decentralized authorization) use cases to handle on-box enforcement.</p></div>
           <div class="row text-center">
                 <h3 class="service-heading">Centralized Access Control</h3>
  
           </div>
           <div class="row"> 
-                <div class="col-md-6 text-center" >
-                    <img src="/assets/img/about/CentralizeUseCase.png" width="100%">
+                <div class="col-md-6 img-centered">
+                    <br><br><img src="/assets/img/about/CentralizeUseCase.png" width="100%"">
                 </div>
                 <div class="col-md-6">
                       <p>A traditional centralized access control model requires any Athenz enabled application to contact Athenz Management Service directly to determine if a specific authenticated principal (user and/or service) has been authorized to carry out the given action on the requested resource. The application receives a simple boolean answer whether or not the request should be processed or rejected. In this model, the Athenz Management Service is the only component that needs to be deployed and managed within your environment. It is suitable for provisioning and configuration use cases where the number of requests processed by the server is small and the latency for authorization checks is not important.</p>
@@ -163,11 +163,11 @@
           <div class="row" >
                 <div class="col-md-6" >
                       <p>For serving/runtime use cases where the application is required to handle large number of requests per second and latency is a concern, Athenz provides a decentralized access control model where the check to see if a given principal (user and/or service) has been authorized to carry out the given action on the requested service is done on the host itself using the Athenz local policy engine library.</p>
-		      <p>With the decentralized model, the authorization policies defining which roles have been authorized to carry out specific actions on resources are asynchronously updated on application hosts and used by the Athenz local policy engine to evaluate the authorization check. In this model, the principal needs to contact Athenz Token Service first to retrieve an Authorization RoleToken for the request and submit that Token as part of its request to the Athenz protected service.</p>
+ 		                  <p>With the decentralized model, the authorization policies defining which roles have been authorized to carry out specific actions on resources are asynchronously updated on application hosts and used by the Athenz local policy engine to evaluate the authorization check. In this model, the principal needs to contact Athenz Token Service first to retrieve an Authorization RoleToken for the request and submit that Token as part of its request to the Athenz protected service.</p>
                       <p>The diagram on the right shows a typical decentralized authorization request handled by Athenz protected service.</p>
                 </div>
                 <div class="col-md-6 text-center" >
-                        <img src="/assets/img/about/DecentralizeUseCase.png" width="100%">
+                        <br><br><br><img src="/assets/img/about/DecentralizeUseCase.png" width="100%">
                 </div>
         </div>
     </div>

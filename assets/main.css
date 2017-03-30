@@ -9,7 +9,7 @@ body {
   color: #fed136; }
 
 p {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.75; }
 
 p.large {
@@ -37,7 +37,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700; }
 
 .img-centered {
-  margin: 0 auto; }
+  margin: 0 auto;
+  vertical-align: middle; }
 
 .bg-light-gray {
   background-color: #eeeeee; }
