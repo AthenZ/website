@@ -674,3 +674,8 @@ img::-moz-selection {
 
 body {
   webkit-tap-highlight-color: #fed136; }
+
+#getting-started pre {
+  background-color: #000;
+  color: #FFF;
+  padding: 25px; }
