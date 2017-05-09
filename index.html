@@ -162,8 +162,8 @@
           </div>
           <div class="row" >
                 <div class="col-md-6" >
-                      <p>For serving/runtime use cases where the application is required to handle large number of requests per second and latency is a concern, Athenz provides a decentralized access control model where the check to see if a given principal (user and/or service) has been authorized to carry out the given action on the requested service is done on the host itself using the Athenz local policy engine library.</p>
- 		                  <p>With the decentralized model, the authorization policies defining which roles have been authorized to carry out specific actions on resources are asynchronously updated on application hosts and used by the Athenz local policy engine to evaluate the authorization check. In this model, the principal needs to contact Athenz Token Service first to retrieve an Authorization RoleToken for the request and submit that Token as part of its request to the Athenz protected service.</p>
+                     <p>For serving/runtime use cases where the application is required to handle large number of requests per second and latency is a concern, Athenz provides a decentralized access control model where the check to see if a given principal (user and/or service) has been authorized to carry out the given action on the requested service is done on the host itself using the Athenz local policy engine library.</p>
+		      <p>With the decentralized model, the authorization policies defining which roles have been authorized to carry out specific actions on resources are asynchronously updated on application hosts and used by the Athenz local policy engine to evaluate the authorization check. In this model, the principal needs to contact Athenz Token Service first to retrieve an Authorization RoleToken for the request and submit that Token as part of its request to the Athenz protected service.</p>
                       <p>The diagram on the right shows a typical decentralized authorization request handled by Athenz protected service.</p>
                 </div>
                 <div class="col-md-6 text-center" >
@@ -257,7 +257,7 @@
 
                     <li class="timeline-inverted">
                         <div class="timeline-image">
-                            <a href="https://github.com/yahoo/athenz/blob/master/README.md"><img class="img-circle img-responsive" src="/assets/img/about/LearnMore.png"></a>
+                            <a href="https://github.com/yahoo/athenz/blob/master/docs/data_model.md"><img class="img-circle img-responsive" src="/assets/img/about/LearnMore.png"></a>
                         </div>
                     </li>
                 </ul>
@@ -266,10 +266,44 @@
     </div>
 </section>
 
+<!-- Getting Started -->
+<section id="getting-started" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Getting Started</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                   <p>To evaluate Athenz, we provide both <a href="https://github.com/yahoo/athenz/blob/master/docs/setup_aws.md">AWS AMI</a> and <a href="https://github.com/yahoo/athenz/blob/master/docs/setup_docker.md">Docker images</a> so that you can quickly have a test development environment up and running with ZMS (Athenz Management Service), ZTS (Athenz Token Service), and UI services.</p>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+<pre>$ docker run -itd -P athenz/athenz #launch Athenz
+$ docker ps --filter "ancestor=athenz/athenz"  #find out exposed ports numbers</pre>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    For reference implementation, take a look at our <a href="https://github.com/yahoo/athenz/blob/master/docs/example_java_centralized_access.md">Java Client/Servlet</a> or <a href="https://github.com/yahoo/athenz/blob/master/docs/example_go_centralized_access.md">Go Client/Server</a> example documentation</a>.
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+        </div>
+</section>
+
+
 
 
 <!-- Footer -->
-<section id="footer" class="bg-light-gray">
+<section id="footer">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-2">
