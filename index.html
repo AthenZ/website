@@ -6,11 +6,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Athenz is a role-based access control (RBAC) solution, providing trusted relationships between applications and services deployed within an organization requ...">
+    <meta name="description" content="Athenz is a role-based access control (RBAC) solution, providing trusted relationships between applications and services deployed within an organization based on X.509 Certificates">
     <meta name="author" content="">
     <meta name="keywords" content="Athenz RBAC security yahoo cloud service role-based role based access control">
 
-    <title>Athenz - Role-Based Access Control Solution</title>
+    <title>Athenz - X.509 Certificate Based Service Authentication and Role-Based Access Control Solution</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -82,7 +82,7 @@
         <div class="intro-text">
             <div class="intro-heading"><img src="images/AthenzReverseVertical.png" width="300"></div>
             <div class="intro-lead-in">Dynamic. Secure. Precise.</div>
-            <div class="intro-lead-2">Athenz is an open source platform for fine grained access control in dynamic infrastructures</div>
+            <div class="intro-lead-2">Athenz is an open source platform for X.509 certificate based service authentication<br>and fine grained access control in dynamic infrastructures</div>
         </div>
     </div>
 </header>
@@ -126,7 +126,7 @@
                     <i class="fa fa-shield fa-stack-1x fa-inverse"></i>
                 </span>
                 <h4 class="service-heading">Service-based security profile</h4>
-                <p>Security definitions that automatically trickle down to hosts within the service.</p>
+                <p>Security definitions that automatically trickle down to hosts within the service. Services authenticated by their Athenz issued X.509 certificates.</p>
             </div>
           
         </div>
@@ -139,6 +139,21 @@
     <div class="container">
         <div class="row">
 
+                <h2 class="section-heading text-center">X.509 Certificate Based Service Authentication</h2>
+         <div class="row text-center"><p>Athenz provides a generalized model for authorized service providers to launch other services identified by their X.509 certificates in an authorized way through a callback-based verification model.</p></div>
+          <div class="row"> 
+                <div class="col-md-6">
+                      <p>Athenz provides service identity X.509 certificates for services running in common providers like OpenStack and AWS that can be used for mutual TLS authentication.The term service here is more generic than a traditional service. A service identity could represent a command, job, daemon, workflow, as well as a service. The launch management software itself (i.e. OpenStack, AWS EC2, Lambda, etc) must be a known entity registered with Athenz, and provisioned to create new identities in its namespace. So for example AWS EC2 can create instances in the same account, Openstack can bootstrap hosts for its tenants, and so on. When the process or instance is launched, various specific information is collected by the Service Identity Agent (SIA) to present to Athenz to prove itself, and if this matches what is provisioned in Athenz and verified by the Provider itself through a callback mechanism, a X.509 identity TLS certificate is issued that can be used both as a client certificate to talk to other Athenz-protected services and as a server certificate to accept incoming TLS connections from other Athenz services.</p>
+                      <p>The diagram on the right shows an instance being bootstrapped with its own Athenz Service Identity X.509 certificates.</p>
+               </div>
+                <div class="col-md-6 img-centered">
+                    <br><br><img src="/assets/img/about/RegisterIdentity.png" width="100%">
+                </div>
+         </div>
+    </div>
+    <div class="container">
+        <div class="row">
+
                 <h2 class="section-heading text-center">Providing RBAC for your needs</h2>
          <div class="row text-center"><p>Athenz is a set of services and libraries supporting role-based authorization (RBAC) for provisioning and configuration (centralized authorization) use cases as well as serving/runtime (decentralized authorization) use cases to handle on-box enforcement.</p></div>
           <div class="row text-center">
@@ -147,7 +162,7 @@
           </div>
           <div class="row"> 
                 <div class="col-md-6 img-centered">
-                    <br><br><img src="/assets/img/about/CentralizeUseCase.png" width="100%"">
+                    <br><br><img src="/assets/img/about/CentralizeUseCase.png" width="100%">
                 </div>
                 <div class="col-md-6">
                       <p>A traditional centralized access control model requires any Athenz enabled application to contact Athenz Management Service directly to determine if a specific authenticated principal (user and/or service) has been authorized to carry out the given action on the requested resource. The application receives a simple boolean answer whether or not the request should be processed or rejected. In this model, the Athenz Management Service is the only component that needs to be deployed and managed within your environment. It is suitable for provisioning and configuration use cases where the number of requests processed by the server is small and the latency for authorization checks is not important.</p>
@@ -276,17 +291,8 @@
             <div class="row">
                 <div class="col-lg-1"></div>
                 <div class="col-lg-10">
-                   <p>To evaluate Athenz, we provide both <a href="https://github.com/yahoo/athenz/blob/master/docs/setup_aws.md">AWS AMI</a> and <a href="https://github.com/yahoo/athenz/blob/master/docs/setup_docker.md">Docker images</a> so that you can quickly have a test development environment up and running with ZMS (Athenz Management Service), ZTS (Athenz Token Service), and UI services.</p>
+                   <p>To evaluate Athenz, checkout our documentation so that you can quickly have a test development environment up and running with <a href="https://github.com/yahoo/athenz/blob/master/docs/setup_zms.md">ZMS (Athenz Management Service)</a>, <a href="https://github.com/yahoo/athenz/blob/master/docs/setup_zts.md">ZTS (Athenz Token Service)</a>, and <a href="https://github.com/yahoo/athenz/blob/master/docs/setup_ui.md">UI</a> services.</p>
                 </div>
-                <div class="col-lg-1"></div>
-            </div>
-            <div class="row">
-                <div class="col-lg-1"></div>
-                <div class="col-lg-10">
-<pre>$ docker run -itd -P athenz/athenz #launch Athenz
-$ docker ps --filter "ancestor=athenz/athenz"  #find out the exposed ports numbers</pre>
-                </div>
-                <div class="col-lg-1"></div>
             </div>
             <div class="row">
                 <div class="col-lg-1"></div>
@@ -331,7 +337,7 @@ $ docker ps --filter "ancestor=athenz/athenz"  #find out the exposed ports numbe
                         <a href="contact.html">Contact Us</a>
                     </div>
                     <div class="quicklinks">
- 		        <a href="https://www.tumblr.com/blog/athenz-security">Blog</a>
+ 		        <a href="https://athenz-rbac.tumblr.com/">Blog</a>
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -341,7 +347,7 @@ $ docker ps --filter "ancestor=athenz/athenz"  #find out the exposed ports numbe
                 <div class="col-md-2">
                 </div>
                 <div class="col-md-9">
-                  <span class="copyright">Copyright 2017 Yahoo Inc. Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License</a>, <a href="https://github.com/y7kim/agency-jekyll-theme">Theme</a> by Rick K.
+                  <span class="copyright">Copyright 2018 Oath Inc. Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License</a>, <a href="https://github.com/y7kim/agency-jekyll-theme">Theme</a> by Rick K.
                 </div>
                 <div class="col-md-2">
                 </div>
