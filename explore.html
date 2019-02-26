@@ -62,10 +62,14 @@
             <div class="col-md">
                 <h4 class="heading">About</h4>
                 <p class="details">Athenz is an open source platform for X.509 certificate based service authentication
-                    and fine grained access control in dynamic infrastructures. It provides a generalized model for authorized
-                    service providers to launch other services identified by their X.509 certificates in an authorized way through
-                    a callback-based verification model. Athenz also supports role-based authorization (RBAC) for provisioning and
-                    configuration (centralized authorization) use cases as well as serving/runtime (decentralized authorization)
+                    and fine grained access control in dynamic infrastructures. It provides a generalized model for
+                    authorized
+                    service providers to launch other services identified by their X.509 certificates in an authorized
+                    way through
+                    a callback-based verification model. Athenz also supports role-based authorization (RBAC) for
+                    provisioning and
+                    configuration (centralized authorization) use cases as well as serving/runtime (decentralized
+                    authorization)
                     use cases to handle on-box enforcement.
                 </p>
             </div>
@@ -81,7 +85,8 @@
                     <p class="details">
                         Athenz provides secure identity in the form of short-lived
                         <a href="https://en.wikipedia.org/wiki/X.509">X.509 certificates</a>
-                        for every workload or service deployed in private (e.g. OpenStack, Kubernetes, Screwdriver) or public
+                        for every workload or service deployed in private (e.g. OpenStack, Kubernetes, Screwdriver) or
+                        public
                         cloud (e.g. AWS EC2, ECS, Fargate, Lambda). Using these X.509 certificates, clients and services
                         establish secure connections and through mutual TLS authentication verify each other's identity.
                         The service identity certificates are only valid for 30 days and the service identity agents
@@ -187,7 +192,8 @@
                 </div>
                 <div class="desc">
                     <h4 class="heading">Domain</h4>
-                    <p class="details">Domains are namespaces, strictly partitioned, providing a context for authoritative statements to
+                    <p class="details">Domains are namespaces, strictly partitioned, providing a context for
+                        authoritative statements to
                         be
                         made about the entities it contains.</p>
                 </div>
@@ -199,7 +205,8 @@
                 </div>
                 <div class="desc">
                     <h4 class="heading">Policies</h4>
-                    <p class="details">To implement access control, we have policies in our domain that govern the use of our resources.
+                    <p class="details">To implement access control, we have policies in our domain that govern the use
+                        of our resources.
                         A
                         policy is set of assertions (rules) about granting or denying an operation/action on a
                         resource.</p>
@@ -212,7 +219,8 @@
                 </div>
                 <div class="desc">
                     <h4 class="heading">Roles</h4>
-                    <p class="details">A role can be thought of as a group and anyone in the group can assume the role that takes a
+                    <p class="details">A role can be thought of as a group and anyone in the group can assume the role
+                        that takes a
                         particular action. Every policy assertion describes what can be done by a role.</p>
                 </div>
             </div>
@@ -220,7 +228,8 @@
                 <div><img src="assets/principle.png" alt=""></div>
                 <div class="desc">
                     <h4 class="heading">Principle</h4>
-                    <p class="details">The actors in Athenz that can assume a role are called principals. These principals are
+                    <p class="details">The actors in Athenz that can assume a role are called principals. These
+                        principals are
                         authenticated and can be users or services. Athenz currently provides service identity and
                         authentication support.</p>
                 </div>
