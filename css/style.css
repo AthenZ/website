@@ -145,10 +145,34 @@ main {
     padding-right: 15px;
 }
 
+@media (min-width: 576px) {
+    .centralized-explore {
+        background-image: url('../assets/centralized_exp-mini.png');
+    }
+}
+
+@media (min-width: 768px) {
+    .centralized-explore {
+        background-image: url('../assets/centralized_exp-small.png');
+    }
+}
+
+@media (min-width: 992px) {
+    .centralized-explore {
+        background-image: url('../assets/centralized_exp-medium.png');
+    }
+}
+
+@media (min-width: 1200px) {
+    .centralized-explore {
+        background-image: url('../assets/centralized_exp-large.png');
+    }
+}
+
 .centralized-explore {
-    background-image: url('../assets/centralized_exp.png');
+    background-image: url('../assets/decentralized_exp-mini.png');
     background-size: 100% 100%;
-    min-height: 310px;
+    min-height: 346px;
 }
 
 .decentralized {
@@ -160,9 +184,33 @@ main {
 }
 
 .decentralized-explore {
-    background-image: url('../assets/decentralized_exp.png');
+    background-image: url('../assets/decentralized_exp-mini.png');
     background-size: 100% 100%;
-    min-height: 310px;
+    min-height: 346px;
+}
+
+@media (min-width: 576px) {
+    .decentralized-explore {
+        background-image: url('../assets/decentralized_exp-mini.png');
+    }
+}
+
+@media (min-width: 768px) {
+    .decentralized-explore {
+        background-image: url('../assets/decentralized_exp-small.png');
+    }
+}
+
+@media (min-width: 992px) {
+    .decentralized-explore {
+        background-image: url('../assets/decentralized_exp-medium.png');
+    }
+}
+
+@media (min-width: 1200px) {
+    .decentralized-explore {
+        background-image: url('../assets/decentralized_exp-large.png');
+    }
 }
 
 .features {
@@ -240,9 +288,33 @@ main {
 }
 
 .service-auth-img {
-    background-image: url('../assets/authentication_exp.png');
+    background-image: url('../assets/service-authentication-mini.png');
     background-size: 100% 100%;
-    min-height: 400px;
+    min-height: 436px;
+}
+
+@media (min-width: 576px) {
+    .service-auth-img {
+        background-image: url('../assets/service-authentication-mini.png');
+    }
+}
+
+@media (min-width: 768px) {
+    .service-auth-img {
+        background-image: url('../assets/service-authentication-small.png');
+    }
+}
+
+@media (min-width: 992px) {
+    .service-auth-img {
+        background-image: url('../assets/service-authentication-medium.png');
+    }
+}
+
+@media (min-width: 1200px) {
+    .service-auth-img {
+        background-image: url('../assets/service-authentication-large.png');
+    }
 }
 
 .aws-temp {
@@ -255,11 +327,33 @@ main {
 }
 
 .aws-temp-img {
-    background-image: url('../assets/aws.png');
+    background-image: url('../assets/aws-mini.png');
     background-size: 100% 100%;
-    min-height: 480px;
-    margin-right: -20px;
-    margin-left: -30px;
+    min-height: 516px;
+}
+
+@media (min-width: 576px) {
+    .aws-temp-img {
+        background-image: url('../assets/aws-mini.png');
+    }
+}
+
+@media (min-width: 768px) {
+    .aws-temp-img {
+        background-image: url('../assets/aws-small.png');
+    }
+}
+
+@media (min-width: 992px) {
+    .aws-temp-img {
+        background-image: url('../assets/aws-medium.png');
+    }
+}
+
+@media (min-width: 1200px) {
+    .aws-temp-img {
+        background-image: url('../assets/aws-large.png');
+    }
 }
 
 .rbac .heading, .getting-started .heading, .about .heading, .service-auth .heading, .aws-temp .heading, .data-model-container .heading, .contact .heading {
@@ -278,7 +372,7 @@ main {
 .architecture {
     margin-left: 25px;
     color: #555555;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     margin-top: -15px;
 }
 
@@ -357,9 +451,39 @@ main {
     border-bottom: 1px solid #adb5bd;
 }
 
-.data-model-container .data-model img {
+.data-model-container {
     height: 100%;
     width: 100%;
+}
+
+.data-model-img {
+    background-image: url('../assets/data-model-mini.png');
+    background-size: 100% 100%;
+    min-height: 824px;
+}
+
+@media (min-width: 576px) {
+    .data-model-img {
+        background-image: url('../assets/data-model-mini.png');
+    }
+}
+
+@media (min-width: 768px) {
+    .data-model-img {
+        background-image: url('../assets/data-model-small.png');
+    }
+}
+
+@media (min-width: 992px) {
+    .data-model-img {
+        background-image: url('../assets/data-model-medium.png');
+    }
+}
+
+@media (min-width: 1200px) {
+    .data-model-img {
+        background-image: url('../assets/data-model-large.png');
+    }
 }
 
 .data-model-container img {
