@@ -145,34 +145,38 @@ main {
     padding-right: 15px;
 }
 
+.centralized-explore {
+    background: url('../assets/decentralized_exp-mini.png') no-repeat center;
+    background-size: contain;
+    min-height: 290px;
+}
+
 @media (min-width: 576px) {
     .centralized-explore {
         background-image: url('../assets/centralized_exp-mini.png');
+        min-height: 320px;
     }
 }
 
 @media (min-width: 768px) {
     .centralized-explore {
         background-image: url('../assets/centralized_exp-small.png');
+        min-height: 346px;
     }
 }
 
 @media (min-width: 992px) {
     .centralized-explore {
         background-image: url('../assets/centralized_exp-medium.png');
+        min-height: 346px;
     }
 }
 
 @media (min-width: 1200px) {
     .centralized-explore {
         background-image: url('../assets/centralized_exp-large.png');
+        min-height: 346px;
     }
-}
-
-.centralized-explore {
-    background-image: url('../assets/decentralized_exp-mini.png');
-    background-size: 100% 100%;
-    min-height: 346px;
 }
 
 .decentralized {
@@ -184,32 +188,36 @@ main {
 }
 
 .decentralized-explore {
-    background-image: url('../assets/decentralized_exp-mini.png');
-    background-size: 100% 100%;
-    min-height: 346px;
+    background: url('../assets/decentralized_exp-mini.png') no-repeat center;
+    background-size: contain;
+    min-height: 290px;
 }
 
 @media (min-width: 576px) {
     .decentralized-explore {
         background-image: url('../assets/decentralized_exp-mini.png');
+        min-height: 320px;
     }
 }
 
 @media (min-width: 768px) {
     .decentralized-explore {
         background-image: url('../assets/decentralized_exp-small.png');
+        min-height: 346px;
     }
 }
 
 @media (min-width: 992px) {
     .decentralized-explore {
         background-image: url('../assets/decentralized_exp-medium.png');
+        min-height: 346px;
     }
 }
 
 @media (min-width: 1200px) {
     .decentralized-explore {
         background-image: url('../assets/decentralized_exp-large.png');
+        min-height: 346px;
     }
 }
 
@@ -260,9 +268,6 @@ main {
 .features-row img {
     width: 100%;
     height: 100%;
-    /*object-fit: contain;*/
-    /*width: calc(100% + 30px);*/
-    /*height: calc(100% + 30px);*/
 }
 
 .features-row > div {
@@ -288,32 +293,36 @@ main {
 }
 
 .service-auth-img {
-    background-image: url('../assets/service-authentication-mini.png');
-    background-size: 100% 100%;
-    min-height: 436px;
+    background: url('../assets/service-authentication-mini.png') no-repeat center top;
+    background-size: contain;
+    min-height: 320px;
 }
 
 @media (min-width: 576px) {
     .service-auth-img {
         background-image: url('../assets/service-authentication-mini.png');
+        min-height: 390px;
     }
 }
 
 @media (min-width: 768px) {
     .service-auth-img {
         background-image: url('../assets/service-authentication-small.png');
+        min-height: 436px;
     }
 }
 
 @media (min-width: 992px) {
     .service-auth-img {
         background-image: url('../assets/service-authentication-medium.png');
+        min-height: 436px;
     }
 }
 
 @media (min-width: 1200px) {
     .service-auth-img {
         background-image: url('../assets/service-authentication-large.png');
+        min-height: 436px;
     }
 }
 
@@ -327,32 +336,36 @@ main {
 }
 
 .aws-temp-img {
-    background-image: url('../assets/aws-mini.png');
-    background-size: 100% 100%;
-    min-height: 516px;
+    background: url('../assets/aws-mini.png') no-repeat center top;
+    background-size: contain;
+    min-height: 360px;
 }
 
 @media (min-width: 576px) {
     .aws-temp-img {
         background-image: url('../assets/aws-mini.png');
+        min-height: 450px;
     }
 }
 
 @media (min-width: 768px) {
     .aws-temp-img {
         background-image: url('../assets/aws-small.png');
+        min-height: 516px;
     }
 }
 
 @media (min-width: 992px) {
     .aws-temp-img {
         background-image: url('../assets/aws-medium.png');
+        min-height: 516px;
     }
 }
 
 @media (min-width: 1200px) {
     .aws-temp-img {
         background-image: url('../assets/aws-large.png');
+        min-height: 516px;
     }
 }
 
@@ -457,32 +470,36 @@ main {
 }
 
 .data-model-img {
-    background-image: url('../assets/data-model-mini.png');
-    background-size: 100% 100%;
-    min-height: 824px;
+    background: url('../assets/data-model-mini.png') no-repeat center top;
+    background-size: contain;
+    min-height: 480px;
 }
 
 @media (min-width: 576px) {
     .data-model-img {
         background-image: url('../assets/data-model-mini.png');
+        min-height: 600px;
     }
 }
 
 @media (min-width: 768px) {
     .data-model-img {
         background-image: url('../assets/data-model-small.png');
+        min-height: 824px;
     }
 }
 
 @media (min-width: 992px) {
     .data-model-img {
         background-image: url('../assets/data-model-medium.png');
+        min-height: 824px;
     }
 }
 
 @media (min-width: 1200px) {
     .data-model-img {
         background-image: url('../assets/data-model-large.png');
+        min-height: 824px;
     }
 }
 
