@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Athenz IO - Case Studies</title>
+
+    <meta property="og:title" content="Open source platform for X.509 certificate based service authentication and fine grained access control in dynamic infrastructures">
+    <meta property="og:description" content="Open source platform for X.509 certificate based service authentication and fine grained access control in dynamic infrastructures">
+    <meta property="og:type" content="website"
+    ><meta property="og:url" content="https://athenz.io/">
+    <meta property="og:site_name" content="Athenz">
+    <meta itemprop=name content="Open source platform for X.509 certificate based service authentication and fine grained access control in dynamic infrastructures">
+    <meta itemprop=description content="Open source platform for X.509 certificate based service authentication and fine grained access control in dynamic infrastructures">
+    <meta name=twitter:card content="summary">
+    <meta name=twitter:title content="Open source platform for X.509 certificate based service authentication and fine grained access control in dynamic infrastructures">
+    <meta name=twitter:description content="Open source platform for X.509 certificate based service authentication and fine grained access control in dynamic infrastructures">
+    <meta name=twitter:image content="https://athenz.io/images/icons/athenz-twitter-icon.jpg">
+    <meta name=twitter:image:alt content="Athenz">
+    <meta property="og:image" content="/images/icons/athenz-icon.png">
+
+    <link rel="icon" href="images/icons/favicon.ico"/>
+    <link href="https://cdn.jsdelivr.net/gh/denali-design/denali-css@2.0.2/css/denali.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/denali-design/denali-icon-font@1.6.0/dist/denali-icon-font.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="denali-default-theme">
+
+<div class="nav rubik-regular">
+    <div class="nav-left">
+
+        <a onclick="toggleTabsLeft()" tabindex="0" id="toggleTab" class="nav-icon hide-small-desktop-up-custom">
+            <i class="d-icon d-menu-hamburger"></i>
+        </a>
+
+        <a href="/">
+            <img class="nav-brand" src="images/icons/athenz-icon.png" alt="Athenz logo" />
+        </a>
+        <div class="float-right hide-small-desktop-up-custom">
+            <a class="nav-icon" id="navToggle"><i class="d-icon d-more-vertical"></i></a>
+        </div>
+    </div>
+    <div class="nav-responsive" id="navMenuContent">
+        <div class="nav-center">
+            <a class="nav-item" href="explore.html#model">Explore</a>
+            <a class="nav-item" href="casestudies.html#hybrid">Case Studies</a>
+            <a class="nav-item" href="https://yahoo.github.io/athenz/" target="_blank">Documentation <i class="d-icon d-external is-sub is-extrasmall"></i></a>
+<!--            <a class="nav-item" href="https://athenz-rbac.tumblr.com/" target="_blank">Blog <i class="d-icon d-external is-sub is-extrasmall"></i></a>-->
+            <!--            <a class="nav-item" href="">Community</a>-->
+        </div>
+        <div class="nav-right">
+            <a href="https://join.slack.com/t/athenz/shared_invite/zt-6c13sdfn-Lilbb~v2FYOkM7hZLGqF6A" target="_blank" class="nav-icon">
+                <i class="d-icon d-slack"></i>
+                <span class="icon-name">Slack</span>
+            </a>
+            <a href="https://github.com/yahoo/athenz" target="_blank" class="nav-icon">
+                <i class="d-icon d-github"></i>
+                <span class="icon-name">Github</span>
+            </a>
+            <a href="contact.html" class="nav-icon">
+                <i class="d-icon d-help-circle"></i>
+                <span class="icon-name">Contact</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="flex h-minus-nav" >
+    <div id="toggleTabsLeft" class="tabs is-primary is-vertical tablet-down-hide-left-custom">
+        <ul>
+            <li><a onclick="toggleTabActive('hybrid')" class="is-active tablinks hybrid" href="#hybrid">Hybrid Environment</a></li>
+            <li><a onclick="toggleTabActive('kubernetes')" class="tablinks kubernetes" href="#kubernetes">Kubernetes</a></li>
+            <li><a onclick="toggleTabActive('mtls')" class="tablinks mtls" href="#mtls">mTLS</a></li>
+            <li><a onclick="toggleTabActive('aws')" class="tablinks aws" href="#aws">AWS</a></li>
+        </ul>
+    </div>
+    <div id="container" class="overflow-y-auto flex-auto case-studies-container">
+
+        <div id="hybrid" class="tabcontent" >
+            <div class="container-full p-t-30">
+                <p class="rubik-bold f-s-28">Service identity in hybrid environments</p>
+                <div>
+                    <img class="" src="images/hybrid-environment-home@2x.png" alt="" style="max-height: 450px;"/>
+                </div>
+                <div class="case-study-content">
+                    <p class="p-t-30 rubik-bold f-s-20">Introduction</p>
+                    <p class="rubik-regular">Athenz uses a callback-based verification model to provide identity to dynamic workloads running in hybrid environments.</p>
+                    <p class="p-t-30 rubik-bold f-s-20">Challenges</p>
+                    <p class="rubik-regular">In today’s dynamic infrastructure, workloads / services can be launched in various environments like on-premise, cloud and hybrid using providers like Openstack, Kubernetes and Amazon Web Services. The challenge is to be able to provide an identity to those in a secure way irrespective of the environment or provider.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Solution</p>
+                    <p class="rubik-regular">
+                        Athenz provides a clear contract for service providers to launch tenant service identities in an authorized way through a callback-based verification model.
+                        The following steps describe the workflow:
+                        <ol class="rubik-regular">
+                            <li>The provider implements the Athenz provided callback interface and will be registered in Athenz as a service launcher.</li>
+                            <li>Once authorized as a service launcher in Athenz, the provider will launch the tenant service by providing it with a signed identity document.</li>
+                            <li>Service Identity Agent (SIA) installed on the tenant service instance during bootstrap process or available as part of the base image that the service is deployed on, will create a private key, generate a certificate signing request (CSR) and submit the identity document along with its CSR to Athenz Token Service (ZTS).</li>
+                            <li>Athenz Token Service will carry out 2 authorization checks:
+                                <ul>
+                                    <li>It verifies that the provider is authorized to launch services. This prohibits any service launcher from acting like an authorized provider and prevents it from attempting to launch tenant services.</li>
+                                    <li>It verifies that the tenant service being launched has authorized the given  provider as its launcher. This prohibits any authorized provider to launch any service without explicit authorization from the tenant service administrator.</li>
+                                </ul>
+                            </li>
+                            <li>Athenz Token Service contacts the provider using the callback interface, to validate the signed instance identity document along with additional details provided in the CSR (e.g. additional sanDNS or sanIP values).</li>
+                            <li>Once verified, Athenz Token Service contacts the Certificate Signer Daemon to generate a X.509 Certificate valid for a configured number of days for the given CSR and returns to the instance.</li>
+                            <li>The Service Identity Agent is responsible for contacting Athenz Token Service daily to refresh the service X.509 certificate.</li>
+                            <li>For easier integration with other services which accept SPIFFE identity, Athenz provides a SPIFFE id in X.509 certificate Subject Alternative Name extension (SAN).</li>
+                        </ol>
+                    </p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Benefit</p>
+                    <p class="rubik-regular">By having Athenz as an identity provider in a hybrid environment solves the most crucial problem of service identity in “zero trust” and provides a consistent authentication mechanism. Also with this model, the private key which is the most important one is actually generated on the instance itself and never leaves it. Additionally each instance/workload gets a unique certificate. Using the identity certificate the service optionally can fetch standards based mtls bound access tokens from Athenz Token Service and use them for authorization support.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Result</p>
+                    <p class="rubik-regular p-b-30">Verizon Media was able to obtain a consistent service identity for thousands of services deployed in various environments like Openstack virtual machines and bare metal hosts, Kubernetes, AWS computes, containers and serverless functions.</p>
+                </div>
+            </div>
+        </div>
+        <div id="kubernetes"  class="tabcontent">
+            <div class="container-full p-t-30">
+                <p class="rubik-bold f-s-28 l-h-46">Athenz Auth Webhook</p>
+                <div>
+                    <img class="" src="images/kubernetes-case-study-1@3x.png" alt="" style="max-height: 450px; float:right;"/>
+                </div>
+                <div class="case-study-content">
+                    <p class="p-t-30 rubik-bold f-s-20">Introduction</p>
+                    <p class="rubik-regular">The Athenz webhook is an API for the Kubernetes authentication and authorization webhook that integrates with Athenz for access checks. It allows flexible resource mapping from Kubernetes resources to Athenz. Access checks within a Kubernetes cluster include any kubectl commands the users may run or direct access through APIs. The webhook also has caching capabilities built in to directly make access decisions without any network hops.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Challenges</p>
+                    <p class="rubik-regular">There are multiple challenges while attempting to use Kubernetes native Role-based access control (RBAC) in a larger organization with many clusters which are multi-tenant. The Kubernetes Role-based access control (RBAC) becomes tough to manage when the access control rules need to be defined across many different clusters the applications are deploying to with many different users accessing them throughout many different independent teams. These application owners need to have full autonomy to be able to change rules at any moment without going through a complicated pipeline or process.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Solution</p>
+                    <p class="rubik-regular">Athenz can directly be hooked into the access control checks in the kubernetes authentication and authorization flow by introducing the athenz webhook which will reach out to Athenz to make access decisions. This webhook is invoked any time users are running the kubernetes kubectl commands or accessing directly through any APIs.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Benefit</p>
+                    <p class="rubik-regular">The use of Athenz has many benefits across an organization, primarily it is a single source of truth for Role-based access control (RBAC) across all kubernetes clusters. It allows users to directly define Kubernetes access control to resources managed in their own namespaces. This allows namespace admins of development teams to be able to add and remove access control rules to the athenz roles and policies which will have immediate effect across all clusters.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Result</p>
+                    <p class="rubik-regular p-b-30">Integrating Athenz into the Kubernetes ecosystem allows teams to be more autonomous in the management of their access controls. The platform team along with the individual application teams can have full control over their own Role-based access control (RBAC) without relying on any specific pipelines and processes which rapidly speeds up development and deployment times. The platform team is also able to maintain the same set of access control rules across multiple Kubernetes clusters which speeds up platform level changes and new cluster creation.</p>
+
+                    <p class="rubik-regular p-b-30">For more details please check out the <a class="rubik-regular" href="https://github.com/yahoo/k8s-athenz-webhook" target="_blank">k8s-athenz-webhook</a> project in Github.</p>
+                </div>
+                <hr class="m-t-60 m-b-30" >
+            </div>
+
+            <div class="container-full p-t-30">
+                <p class="rubik-bold f-s-28 l-h-46">Athenz Istio Auth Controller</p>
+                <div>
+                    <img class="" src="images/kubernetes-case-study-2@3x.png" alt="" style="max-height: 450px; float:right;"/>
+                </div>
+                <div class="case-study-content">
+                    <p class="p-t-30 rubik-bold f-s-20">Introduction</p>
+                    <p class="rubik-regular">The Athenz Istio Auth controller is responsible for the conversion of Athenz Role-based access control (RBAC) into Istio custom resources. This enables users to dynamically configure service to service authorization directly through Athenz.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Challenges</p>
+                    <p class="rubik-regular">When the Istio service mesh was introduced into the organization, it brought along with it a lot of complexities in terms of user management as it is a technology with many different features and configurations. Due to this complex overhead, we as the platform team realized it was not a scalable solution for all application developers in the company to learn Istio for them to be able to define service to service authorization. These development teams would also need to be responsible for the management of Istio configurations and their corresponding deployments. All of these issues make onboarding authorization much tougher for individual developers.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Solution</p>
+                    <p class="rubik-regular">Athenz is directly used as an Role-based access control (RBAC) provider in order to define service to service authorization rules. Application developers are able to go into the Athenz UI and define which services are allowed to communicate with each other. These access rules are then picked up by this athenz Istio auth controller which will go ahead and convert them to the corresponding Istio Role-based access control (RBAC) rules which will then be propagated to the services to enforce authorization.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Benefit</p>
+                    <p class="rubik-regular">The primary benefit of utilizing Athenz is the simplicity of the interface. The UI allows users to easily define access control rules simply without complex configuration. Since an organization can use Athenz for a variety of different use cases for identity and access management, developers in the organization only need to be familiar with one technology to define access rules across multiple technologies and stacks. The service to service authorization is just one such use case which Athenz makes possible.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Result</p>
+                    <p class="rubik-regular p-b-30">Utilizing Athenz as the interface to define service to service authorization greatly speeds up development times for application owners and makes the feature self service which allows for full autonomy. The UI allows users to quickly turn authorization rules on and off as opposed to going through some sort of deployment pipeline which needs to deploy configuration into Kubernetes clusters. Due to our controller being able to pick these rules up quickly, the changes are almost immediately reflected on the system. It also means that developers are not required to learn the complex ecosystem which is Istio to define these access rules but can define them through an interface they are familiar with, Athenz, in order to get the benefits.</p>
+
+                    <p class="rubik-regular p-b-30">For more details please check out the <a class="rubik-regular" href="https://github.com/yahoo/k8s-athenz-istio-auth" target="_blank">k8s-athenz-istio-auth</a> project in Github.</p>
+                </div>
+                <hr class="m-t-60 m-b-30" >
+            </div>
+
+
+
+            <div class="container-full p-t-30">
+                <p class="rubik-bold f-s-28 l-h-46">Athenz Service Identity</p>
+                <div>
+                    <img class="" src="images/kubernetes-case-study-3@3x.png" alt="" style="max-height: 450px; float:right;"/>
+                </div>
+                <div class="case-study-content">
+                    <p class="p-t-30 rubik-bold f-s-20">Introduction</p>
+                    <p class="rubik-regular">Every container launched in Kubernetes needs unique identity and secure credentials to authenticate with other dependent systems. The kubernetes service account token can be used to exchange credentials with external auth systems to provide a much wider globally scoped credentials such as Athenz service identity certificates.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Challenges</p>
+                    <p class="rubik-regular">Every application that needs to interact with an internal/external service needs to have an identity for its authentication and authorization. Such identities are usually associated with the application instance rather than the node on which the application instance is running. Hence, the container platform needs to provide an API for workloads to obtain and refresh such credentials.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Solution</p>
+                    <p class="rubik-regular">A Service Identity Agent (SIA) container on the pod is responsible for obtaining and refreshing Athenz service certificates. The SIA container creates a CSR attached with the kubernetes bound service account JWT and makes an Athenz service identity certificate request to ZTS. ZTS forwards the request to an in-cluster identity provider (Identityd) which validates the kubernetes JWT with the help of API server and authenticates the SIA request. On successful validation, ZTS issues a service identity certificate to the SIA which is shared with the application.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Benefit</p>
+                    <p class="rubik-regular">The container platform provisions identities to applications with minimal or zero user effort at scale that can be used for intra-cluster service-to-service authentication. The private keys are short lived and rotated with every certificate refresh providing a secure identity framework.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Result</p>
+                    <p class="rubik-regular p-b-30">A secure identity provider mechanism for container workloads provisioning unique short lived credentials that can be universally used to authenticate and authorize with dependent systems is critical to any container platform and this solution provides the necessary building blocks to integrate Athenz Role-based access control (RBAC) with kubernetes workloads.</p>
+
+                    <p class="rubik-regular p-b-30">For more details please check out the <a class="rubik-regular" href="https://github.com/yahoo/k8s-athenz-identity" target="_blank">k8s-athenz-identity</a> project in Github.</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="mtls" class="tabcontent">
+            <div class="container-full p-t-30">
+                <p class="rubik-bold f-s-28 l-h-46">MTLS bound access tokens</p>
+                <div>
+                    <img class="" src="images/mtls-home@3x.png" alt="" style="max-height: 450px;"/>
+                </div>
+                <div class="case-study-content">
+                    <p class="p-t-30 rubik-bold f-s-20">Introduction</p>
+                    <p class="rubik-regular">Mutual authentication based on Transport Layer Security (TLS) X.509 certificates refers to both client and server authenticating each other by verifying the provided X.509 certificates such that both parties are assured of the others' service identity. Access tokens are the security credentials that identify the privileges which the calling service has to access resources owned by a different service. Athenz provides centralized as well as decentralized authorization capabilities and client libraries to facilitate it.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Challenges</p>
+                    <p class="rubik-regular">How to harden the security by enabling mutual TLS authentication between all the services, clients, and components and authorize action(s) the authenticated principal is trying to perform on your resources?</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Solution</p>
+                    <p class="rubik-regular">The expectation is that clients and services are authenticating using X.509 Service Identity Certificates issued by Athenz Certificate Authority (CA).</p>
+                    <br>
+                    <p class="rubik-regular">Before a client makes any https connection to process a request, it must be registered with an Athenz Service Provider to be issued a short-lived x.509 certificate that is automatically renewed. Whereas the server is configured to require Athenz Service Identity x.509 Certificates for any endpoint requiring authorization and is configured with Athenz CA certificates in its truststore.</p>
+                    <br>
+                    <p class="rubik-regular">The client using its Athenz issued X.509 identity certificate requests an authorization token from Athenz Token Service that issues mTLS bound OAuth2 access tokens
+                        <a href="https://tools.ietf.org/html/rfc8705" target="_blank">(RFC8705: OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access Tokens)</a>
+                        the application services can use to authorize requests based on policies defined in the Athenz Management System after authentication based on x.509 identity certificates. Support for OAuth2 access tokens is based on Client Credentials authentication workflow as defined in
+                        <a href="https://tools.ietf.org/html/rfc6749#section-4.4" target="_blank">RFC6749: The OAuth 2.0 Authorization Framework.</a></p>
+                    <br>
+                    <p class="rubik-regular">To prevent the replay attacks, Athenz Token Service adds a claim in the access token with the SHA-256 hash of the x.509 identity certificate used to request the access token. That way the receiving service can verify the hash in access token with the incoming certificate. By ensuring that services only trust Athenz CA, bad actors with identity obtained with the same Subject but from a different CA will not be accepted.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Benefit</p>
+                    <p class="rubik-regular">With Athenz Service Provider support, each instance/workload gets a unique private key generated on the instance itself and a unique x.509 certificate that does not need to be propagated to other instances. The private key never leaves the instance thus reducing its exposure. Using those x.509 certificates to enforce mutual TLS authentication, all network traffic between services, clients, and components are encrypted in transit and the services have a complete knowledge and control of ingress and egress. By doing mTLS, only trusted clients are allowed to connect and all the bad actors are rejected. Using the mtls bound access tokens enables services to enforce fine-grained authorization to provide the least privileged access to their resources without the possibility of replay attacks.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Result</p>
+                    <p class="rubik-regular p-b-30">By using Athenz provided authorization mechanism, combined with mTLS bound access tokens, services can implement authorization with minimal code and configuration that would allow them to concentrate on delivering business value.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="aws" class="tabcontent">
+            <div class="container-full p-t-30">
+                <p class="rubik-bold f-s-28 l-h-46">AWS temporary credentials for on-premise services</p>
+                <div>
+                    <img class="" src="images/aws-case-study@3x.png" alt="" style="max-height: 450px;"/>
+                </div>
+                <div class="case-study-content">
+                    <p class="p-t-30 rubik-bold f-s-20">Introduction</p>
+                    <p class="rubik-regular">AWS Temporary Credentials are issued by AWS Security Token Service (AWS STS) to authenticated users and control access to AWS resources. Athenz provides a capability to give the temporary credentials in a secure way to on-premise services so that it can use AWS resources without using static credentials.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Challenges</p>
+                    <p class="rubik-regular">How to securely access AWS services from on-prem data centers without using static credentials defined in AWS Identity and Access Management?</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Solution</p>
+                    <p class="rubik-regular">If Athenz Token Service ( ZTS ) is  deployed in AWS, it can bridge between AWS IAM roles/STS and Athenz Service Identities. As such any service that is running in an on-prem data center and needs to access AWS Services can first obtain AWS Temporary credentials from Athenz ZTS Service and then use those credentials with AWS SDK. When requesting AWS temporary credentials for a role, the account administrator sets up an AssumeRole policy that authorizes cross-account access to Athenz ZTS Service.</p>
+                    <br>
+                    <p class="rubik-regular">To request AWS temporary credentials, the domain administrator must first set their account id in their Athenz Domain configuration. It is assumed that the administrator has already created a role in AWS IAM that they would like to obtain temporary credentials for. The important part of the setup is the trust relationship for that role such that Athenz ZTS can assume that role. The role must be configured with the following trust relationship statement:</p>
+                    <p class="rubik-regular">
+                    <pre>
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": "arn:aws:iam::&lt;Athenz-ZTS-Service-Account-ID&gt;:role/&lt;Athenz-ZTS-Service-Identity&gt;"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                    </pre>
+                    </p>
+                    <p class="rubik-regular">It is strongly recommended that the trust policy is configured to require an external ID to be provided. By including the external id condition in the AssumeRole policy, the account administrator secures its roles to be accessed by unauthorized principals through ZTS since AWS STS will reject any "assume role" requests unless the external id is specified as part of the request. Even though the external id is passed as part of the uri, the ZTS server automatically strips out and does not log the external id in its access log file.</p>
+                    <br>
+                    <p class="rubik-regular">Once the AWS setup has been completed, the domain administrator is ready to set up the authorization policies in Athenz Management Service. In ZMS, the administrator would create a role in their domain with any service identities that may request temporary credentials for the AWS role. Then, the administrator would create a policy authorizing the configured Athenz role members to assume the AWS role. When creating the policy the action must be `assume_aws_role`, and resource must be the IAM role name.</p>
+                    <br>
+                    <p class="rubik-regular">At this point any client that has been authorized to assume the configured IAM role in Athenz may use their service identity X.509 certificate, contact ZTS and request AWS temporary credentials which then it can use to access AWS services.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Benefit</p>
+                    <p class="rubik-regular">This feature eliminates the need to manage AWS static credentials when accessing AWS services from on-prem services since those need to be invalidated and rotated when users having access to those credentials leave the company.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Result</p>
+                    <p class="rubik-regular p-b-30">Services deployed in on-premise data centers can still utilize AWS resources by using Athenz provided temporary credentials without compromising security.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--footer-->
+        <div class="container-full custom-footer">
+            <div class="container">
+                <div class="row p-t-70">
+                    <div class="xs-col-4-12 col-2-12 p-b-30">
+                        <ul>
+                            <li class="rubik-bold f-s-16">Community</li>
+<!--                            <li class="rubik-regular"><a href="https://athenz-rbac.tumblr.com/">Blog</a></li>-->
+                            <li class="rubik-regular"><a href="https://join.slack.com/t/athenz/shared_invite/zt-6c13sdfn-Lilbb~v2FYOkM7hZLGqF6A" target="_blank">Slack</a></li>
+                            <li class="rubik-regular"><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="xs-col-4-12 col-2-12 p-b-30">
+                        <ul>
+                            <li class="rubik-bold f-s-16">Contribute</li>
+                            <li class="rubik-regular"><a href="https://github.com/yahoo/athenz" target="_blank">Github</a></li>
+                            <li class="rubik-regular"><a href="https://github.com/yahoo/athenz/issues" target="_blank">Suggest</a></li>
+                        </ul>
+                    </div>
+                    <div class="xs-col-4-12 col-2-12 p-b-30">
+                        <ul>
+                            <li class="rubik-bold f-s-16">Resources</li>
+                            <li class="rubik-regular"><a href="https://yahoo.github.io/athenz/" target="_blank">Documentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+<script type="text/javascript">
+    function toggleTabsLeft() {
+        let toggleTabsLeft = document.getElementById("toggleTabsLeft");
+        toggleTabsLeft.classList.toggle('tablet-down-toggle-tabs-left-custom');
+    };
+    document.getElementById('navToggle').addEventListener("click", toggleMenu);
+
+    function toggleMenu() {
+        document.getElementById('navMenuContent').classList.toggle("is-active");
+    }
+
+    function toggleTabActive(tabName) {
+
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace("is-active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        var activeTab = document.getElementsByClassName(tabName);
+        activeTab[0].classList.add("is-active");
+
+        let toggleTabsLeft = document.getElementById("toggleTabsLeft");
+        if(toggleTabsLeft.classList.contains("tablet-down-toggle-tabs-left-custom")) {
+            toggleTabsLeft.classList.toggle('tablet-down-toggle-tabs-left-custom');
+        }
+    }
+
+
+    document.addEventListener("DOMContentLoaded", function(){
+        // Handler when the DOM is fully loaded
+        function onHashChange() {
+            var hash = window.location.hash;
+            if (hash) {
+                toggleTabActive(hash.split('#')[1]);
+            }
+        }
+
+        window.addEventListener('hashchange', onHashChange, false);
+        onHashChange();
+    });
+
+</script>
+</html>
