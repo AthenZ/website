@@ -2,263 +2,470 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Athenz IO Docs</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="assets/favicon.ico"/>
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Athenz IO - Home</title>
+
+    <meta property="og:title" content="Open source platform for X.509 certificate based service authentication and fine grained access control in dynamic infrastructures">
+    <meta property="og:description" content="Open source platform for X.509 certificate based service authentication and fine grained access control in dynamic infrastructures">
+    <meta property="og:type" content="website"
+    ><meta property="og:url" content="https://athenz.io/">
+    <meta property="og:site_name" content="Athenz">
+    <meta property="og:image" content="/images/icons/athenz-icon.png">
+    <meta itemprop=name content="Open source platform for X.509 certificate based service authentication and fine grained access control in dynamic infrastructures">
+    <meta itemprop=description content="Open source platform for X.509 certificate based service authentication and fine grained access control in dynamic infrastructures">
+    <meta name=twitter:card content="summary">
+    <meta name=twitter:title content="Open source platform for X.509 certificate based service authentication and fine grained access control in dynamic infrastructures">
+    <meta name=twitter:description content="Open source platform for X.509 certificate based service authentication and fine grained access control in dynamic infrastructures">
+    <meta name=twitter:image content="https://athenz.io/images/icons/athenz-twitter-icon.jpg">
+    <meta name=twitter:image:alt content="Athenz">
+
+    <link href="images/icons/favicon.ico" rel="icon"/>
+    <link href="https://unpkg.com/flickity@2/dist/flickity.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/gh/denali-design/denali-css@2.0.2/css/denali.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/denali-design/denali-icon-font@1.6.0/dist/denali-icon-font.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.5.1/dist/jquery.min.js"></script>
 </head>
-<body>
-<div class="container-fluid fixed-top ">
-    <nav class="navbar  navbar-dark navbar-expand-lg justify-content-between pt-lg-0 pb-lg-0">
-        <a class="navbar-brand logo invisible" href="index.html">
-            <img src="assets/athenz_logo.png" alt="Athenz Logo" style="width: 140px; height: 38px;">
+<body class="denali-default-theme">
+
+<div class="nav is-fixed-top rubik-regular">
+    <div class="nav-left">
+        <a href="/">
+            <img alt="Athenz logo" class="nav-brand" src="images/icons/athenz-icon.png"/>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars"
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbars">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="explore.html">Explore</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://yahoo.github.io/athenz/">Documentation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://athenz-rbac.tumblr.com/">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="https://join.slack.com/t/athenz/shared_invite/zt-6c13sdfn-Lilbb~v2FYOkM7hZLGqF6A">Slack</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/yahoo/athenz">Github</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
+        <div class="float-right hide-small-desktop-up-custom">
+            <a class="nav-icon" id="navToggle"><i class="d-icon d-more-vertical"></i></a>
         </div>
-    </nav>
+    </div>
+    <div class="nav-responsive" id="navMenuContent">
+        <div class="nav-center">
+            <a class="nav-item" href="explore.html#model">Explore</a>
+            <a class="nav-item" href="casestudies.html#hybrid">Case Studies</a>
+            <a class="nav-item" href="https://yahoo.github.io/athenz/" target="_blank">Documentation <i class="d-icon d-external is-sub is-extrasmall"></i></a>
+<!--            <a class="nav-item" href="https://athenz-rbac.tumblr.com/" target="_blank">Blog <i class="d-icon d-external is-sub is-extrasmall"></i></a>-->
+<!--            <a class="nav-item" href="">Community</a>-->
+        </div>
+        <div class="nav-right">
+            <a class="nav-icon" href="https://join.slack.com/t/athenz/shared_invite/zt-6c13sdfn-Lilbb~v2FYOkM7hZLGqF6A"
+               target="_blank">
+                <i class="d-icon d-slack"></i>
+                <span class="icon-name">Slack</span>
+            </a>
+            <a class="nav-icon" href="https://github.com/yahoo/athenz" target="_blank">
+                <i class="d-icon d-github"></i>
+                <span class="icon-name">Github</span>
+            </a>
+            <a class="nav-icon" href="contact.html">
+                <i class="d-icon d-help-circle"></i>
+                <span class="icon-name">Contact</span>
+            </a>
+        </div>
+    </div>
 </div>
-<main>
-    <div class="container-fluid slider">
-        <div class="container pt-5 pb-1">
-            <div class="row">
-                <div class="col-md-auto col-lg-8 col-xl-6">
-                    <div class="heading mt-0">
-                        <h1><img src="assets/athenz_logo.png" class="img-fluid" alt="Athenz Logo"
-                                 style="width: 260px; height: 71px;">
-                        </h1>
 
-                        <div>
-                            <p class="word-wrap">Athenz is an open source platform for X.509 certificate-based service
-                                authentication and fine-grained access control in dynamic infrastructures</p>
-                        </div>
-                        <div>
-                            <a href="explore.html" class="btn btn-primary btn-explore">Explore Athenz</a>
 
-                            <a href="https://join.slack.com/t/athenz/shared_invite/zt-6c13sdfn-Lilbb~v2FYOkM7hZLGqF6A"
-                               class="btn btn-join-slack">Join in on Slack</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-auto col-lg-4 col-xl-6"></div>
-            </div>
-        </div>
-    </div>
+<div class="container-full cover m-t-60">
     <div class="container">
-        <div class="row features-row">
-            <div class="col-lg col-sm-6">
-                <div class="features">
-                    <h5 class="heading">Never Trust & Always Verify</h5>
-                    <hr class="line" size="10">
-                    <p class="details">
-                        Enable zero trust core principles like traffic encryption, AuthN, AuthZ, Dynamic Trust and least
-                        privilege access.
+        <div class="row athenz-home-hero">
+            <div class="xs-col-12-12 sm-col-10-12 sm-col-off-1-12 col-6-12">
+                <div class="athenz-logo-icon">
+                    <img alt="Athenz logo" src="images/icons/athenz-logo.png" style="max-height: 46px;">
+                </div>
+                <div class="athenz-header-description p-t-30">
+                    <p class="rubik-bold is-grey-100">
+                        Open source platform for X.509 certificate
+                        based service authentication and fine grained
+                        access control in dynamic infrastructures
                     </p>
                 </div>
-            </div>
-            <div class="col-lg col-sm-6 never-trust">
-                <!--<img class="" src="assets/never-trust_2.png"/>-->
-            </div>
-            <div class="col-lg col-sm-6 ">
-                <div class="features">
-                    <h5 class="heading">Fine-grained Authorization</h5>
-                    <hr class="line" size="10">
-                    <p class="details">
-                        Authorize all authenticated clients using fine-grained role-based (RBAC)
-                        access control.
-                    </p>
+                <div class="ts-gs p-t-30 flex">
+                    <a href="https://yahoo.github.io/athenz/" target="_blank"><button class="button is-large is-text get-started-button"><strong>Get Started</strong></button></a>
+                    <div class="ts-wv rubik-regular p-t-10 p-l-40">
+                        <a class="is-grey-100" href="#" id="watch-video">
+                            <i class="d-icon d-play-circle "></i> <strong>Watch Video</strong>
+                        </a>
+                    </div>
+                    <div id="videoPlayer" style="z-index: 1000; display: none;">
+                        <iframe data-url="https://www.youtube-nocookie.com/embed/TAT-IpNKBaU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <button id="closeButton"></button>
+                    </div>
+                </div>
+                <div class="integrations-group p-t-40">
+                    <div class="p-r-10">
+                        <p class="rubik-regular is-grey-100">Integrations</p>
+                    </div>
+                    <div>
+                        <img alt="kubernetes" class="integration-icons" src="images/icons/kubernetes-circle.png"/>
+                        <img alt="aws" class="integration-icons" src="images/icons/aws-circle.png"/>
+                        <img alt="openstack" class="integration-icons" src="images/icons/openstack-circle.png"/>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg col-sm-6  fine-grained">
-                <!--<img src="assets/fine-grained_2.png" alt="">-->
-            </div>
-        </div>
-        <br class="d-block d-md-none"/>
-        <div class="row features-row">
-            <div class="col-lg col-sm-6 certificate">
-                <!--<img class="" src="assets/certificate_2.png"/>-->
-            </div>
-            <div class="col-lg col-sm-6">
-                <div class="features">
-                    <h5 class="heading">X.509 Certificate Authentication</h5>
-                    <hr class="line" size="10">
-                    <p class="details">
-                        Service Identity in the form of short-lived X.509 certificates to all workloads deployed
-                        in private or public clouds. Stronger security by mTLS authentication.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg col-sm-6   single-source">
-                <!--<img class="" src="assets/single-source_2.png"/>-->
-            </div>
-            <div class="col-lg col-sm-6  ">
-                <div class="features">
-                    <h5 class="heading">Single Source of Truth</h5>
-                    <hr class="line" size="10">
-                    <p class="details">
-                        Consolidated service serving various downstream security implementations, including
-                        support for non-user entities.
-                    </p>
+            <div class="xs-col-12-12 sm-col-10-12 sm-col-off-1-12 col-6-12">
+                <div class="athenz-hero-image">
+                    <img alt="Athenz components explanation" src="images/athenz-hero@3x.png">
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid grey-background">
-        <div class="container">
-            <div class="row grey-background">
-                <div class="col-md">
-                    <div class="rbac">
-                        <h4 class="heading">Providing RBAC for your needs</h4>
-                        <p class="details">
-                            Athenz is a set of services and libraries supporting role-based authorization (RBAC) for
-                            provisioning and configuration (centralized authorization) use cases as
-                            well as serving/runtime (decentralized authorization) use cases to handle on-box
-                            enforcement.
-                            <a href="https://yahoo.github.io/athenz/auth_flow/">Learn More</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row grey-background">
-                <div class="col-lg">
-                    <div class="architecture">
-                        <h5 class="heading">Centralized</h5>
-                        <p class="details">
-                            A traditional centralized access control model requires any Athenz enabled
-                            application to contact Athenz Management Service directly to determine if a
-                            specific authenticated principal has been authorized to
-                            carry out the given action on the requested resource.
-                            <a href="https://yahoo.github.io/athenz/auth_flow/#centralized-access-control-control-plane">Learn
-                                More</a>
-                        </p>
-                        <p>
-                    </div>
-                    <div class="row centralized"></div>
-                </div>
-                <div class="col-lg">
-                    <div class="architecture">
-                        <h5 class="heading">Decentralized</h5>
-                        <p class="details">
-                            For use cases where latency is a concern, Athenz provides a decentralized
-                            model where the check to see if a given principal has been
-                            authorized to carry out the given action on the requested service is done
-                            on the host itself using the Athenz local policy engine library.
-                            <a href="https://yahoo.github.io/athenz/auth_flow/#decentralized-access-control-data-plane">Learn
-                                More</a>
-                        </p>
-                    </div>
-                    <div class="row decentralized"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md">
-                    <div class="getting-started">
-                        <h4 class="heading">Getting Started</h4>
-                        <p class="details">Explore the Athenz documentation and easily create a test development
-                            environment with
-                            <a href="https://yahoo.github.io/athenz/setup_zms_prod/">ZMS (Athenz Management
-                                Service)</a>,
-                            <a href="https://yahoo.github.io/athenz/setup_zts_prod/">ZTS (Athenz Token Service)</a>,
-                            and
-                            <a href="https://yahoo.github.io/athenz/setup_ui_prod/">UI</a>
-                            services. For reference implementation, visit the
-                            <a href="https://yahoo.github.io/athenz/example_java_centralized_access/">Java
-                                Client/Servlet</a> or
-                            <a href="https://yahoo.github.io/athenz/example_go_centralized_access/">Go
-                                Client/Server</a>
-                            example documentation.</p>
-                        <p>
-                            <a href="https://yahoo.github.io/athenz/"
-                               class="btn btn-outline-primary btn-documentation">Documentation</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
+
+
+
+<div class="container-full">
     <div class="container">
-        <div class="row footer">
-            <div class="col-md col-xs-12 col-sm-12">
-                <div class="row footer-lists pl-sm-0">
-                    <div class="col-md col-xs col-sm">
-                        <h6>COMMUNITY</h6>
-                        <ul class="list-unstyled">
-                            <li><a href="https://athenz-rbac.tumblr.com">Blog</a></li>
-                            <li>
-                                <a href="https://join.slack.com/t/athenz/shared_invite/zt-6c13sdfn-Lilbb~v2FYOkM7hZLGqF6A">Slack</a>
-                            </li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                        </ul>
+        <div class="row updates-container card-container">
+            <div class="xs-col-4-12 xs-col-off-1-12 sm-col-10-12 sm-col-off-1-12 col-4-12">
+                <a class="col updates p-t-30" href="explore.html#zerotrust">
+                    <p class="title rubik-medium">Never Trust & <br> Always Verify</p>
+                    <p class="text rubik-regular">Enables zero trust core principles like traffic encryption, AuthN, AuthZ, Dynamic Trust and least privilege access</p>
+                    <p class="action rubik-regular">Learn More</p>
+                </a>
+            </div>
+            <div class="xs-col-4-12 xs-col-off-1-12 sm-col-10-12 sm-col-off-1-12 col-4-12">
+                <a class="col updates p-t-30" href="explore.html#authz">
+                    <p class="title rubik-medium">Fine-grained Authorization</p>
+                    <p class="text rubik-regular">Authorize all authenticated clients using fine-grained role-based (RBAC) access control</p>
+                    <p class="action rubik-regular">Learn More</p>
+                </a>
+            </div>
+            <div class="xs-col-4-12 xs-col-off-1-12 sm-col-10-12 sm-col-off-1-12 col-4-12">
+                <a class="col updates p-t-30" href="explore.html#authn">
+                    <p class="title rubik-medium">X.509 Certificate Authentication</p>
+                    <p class="text rubik-regular">Service identity in the form of short-lived X.509 certificates to all workloads deployed in private or public clouds</p>
+                    <p class="action rubik-regular">Learn More</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- grey section -->
+
+<div class="container-full grey-section-container">
+    <div class="container">
+        <div class="row grey-section-row">
+            <!--            Heading -->
+            <div class="p-b-30 grey-section-icon">
+                <img alt="Athenz components explanation" src="images/icons/hybrid-circle.png">
+            </div>
+            <div class="col-11-12 p-b-30 p-t-10">
+                <span class="rubik-medium grey-section-heading">Identities for all workloads in your hybrid environment</span>
+            </div>
+
+            <!--            content -->
+            <div class="xs-col-12-12 sm-col-10-12 col-5-12">
+                <div class="row">
+                    <!--            Heading -->
+                    <div class="col-12-12 p-b-30">
+                        <p class="rubik-regular"><strong>Problem</strong><br></p>
+                        <p class="rubik-regular">How to enable Zero Trust core principles like traffic encryption and authentication among all workloads in a hybrid environment?</p>
                     </div>
-                    <div class="col-md col-xs col-sm">
-                        <h6>CONTRIBUTE</h6>
-                        <ul class="list-unstyled">
-                            <li><a href="https://github.com/yahoo/athenz">GitHub</a></li>
-                            <li><a href="https://github.com/yahoo/athenz/issues">Suggest</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md col-xs col-sm">
-                        <h6>RESOURCES</h6>
-                        <ul class="list-unstyled">
-                            <li><a href="explore.html">Getting Started</a></li>
-                            <li><a href="https://yahoo.github.io/athenz/">Documentation</a></li>
-                        </ul>
+                </div>
+                <div class="row">
+                    <!--            Heading -->
+                    <div class="col-12-12 p-b-30">
+                        <p class="rubik-regular"><strong>Solution</strong><br></p>
+                        <p class="rubik-regular">Athenz issues service identities in the form of short-lived X.509 certificates to all workloads deployed in private or public clouds enabling secure communication among all workloads with mTLS.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md"></div>
+            <div class="xs-col-2-12  sm-col-10-12 col-1-12">
+            </div>
+            <!--            image -->
+            <div class="xs-col-12-12  sm-col-10-12 col-6-12">
+                <img src="images/hybrid-environment-home@3x.png">
+            </div>
+            <div class="col-12-12 p-b-30 learn-more-button">
+                <button class="button is-large is-outline"
+                        onclick="window.location.href='./casestudies.html#hybrid';">Learn More</button>
+            </div>
+        </div>
+
+        <hr class="grey-section-divider">
+
+
+        <div class="row grey-section-row">
+            <!--            Heading -->
+            <div class="p-b-30 grey-section-icon">
+                <img alt="Athenz components explanation" src="images/icons/kubernetes-circle.png">
+            </div>
+            <div class="col-11-12 p-b-30 p-t-10">
+                <span class="rubik-medium grey-section-heading">Authorization and identity provider solution for your Kubernetes clusters</span>
+            </div>
+
+            <!--            content -->
+            <div class="xs-col-12-12 sm-col-10-12 col-5-12">
+                <div class="row">
+                    <!--            Heading -->
+                    <div class="col-12-12 p-b-30">
+                        <p class="rubik-regular"><strong>Problem</strong><br></p>
+                        <p class="rubik-regular">How do we provide credentials to container workloads to prove its identity and to authenticate with the Kubernetes API, establish mTLS with services, and define role-based access control (RBAC)?</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <!--            Heading -->
+                    <div class="col-12-12 p-b-30">
+                        <p class="rubik-regular"><strong>Solution</strong><br></p>
+                        <p class="rubik-regular">An Identity provider mechanism enables workloads to authenticate with kubernetes container credentials such as pod bound service account tokens in exchange for Athenz service identity certificates using a callback mechanism that allows a kubernetes pod-aware identity service to authenticate such credentials.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="xs-col-2-12  sm-col-10-12  col-1-12">
+            </div>
+            <!--            image -->
+            <div class="xs-col-12-12  sm-col-10-12  col-6-12">
+                <img src="images/kubernetes-home@3x.png">
+            </div>
+            <div class="col-12-12 p-b-30 learn-more-button">
+                <button class="button is-large is-outline"
+                        onclick="window.location.href='./casestudies.html#kubernetes';">Learn More</button>
+            </div>
+        </div>
+
+        <hr class="grey-section-divider">
+
+        <div class="row grey-section-row">
+            <!--            Heading -->
+            <div class="p-b-30 grey-section-icon">
+                <img alt="Athenz components explanation" src="images/icons/mtls-circle.png">
+            </div>
+            <div class="col-11-12 p-b-30 p-t-10">
+                <span class="rubik-medium grey-section-heading">Industry Standard Authorization mTLS bound access token</span>
+            </div>
+
+            <!--            content -->
+            <div class="xs-col-12-12 sm-col-10-12 col-5-12">
+                <div class="row">
+                    <!--            Heading -->
+                    <div class="col-12-12 p-b-30">
+                        <p class="rubik-regular"><strong>Problem</strong><br></p>
+                        <p class="rubik-regular">How to deploy a centralized authorization store and deploy a consistent authorization solution based on industry standard OAuth2 access tokens without implementing the logic in each application?</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <!--            Heading -->
+                    <div class="col-12-12 p-b-30">
+                        <p class="rubik-regular"><strong>Solution</strong><br></p>
+                        <p class="rubik-regular">Athenz Token Service issues industry standard mTLS bound OAuth2 access tokens that application services can use to both authenticate (x.509 identity certificates) and authorize requests based on policies defined in the Athenz Management System.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="xs-col-2-12  sm-col-10-12  col-1-12">
+            </div>
+            <!--            image -->
+            <div class="xs-col-12-12  sm-col-10-12  col-6-12">
+                <img src="images/mtls-home@3x.png">
+            </div>
+            <div class="col-12-12 p-b-30 learn-more-button">
+                <button class="button is-large is-outline"
+                        onclick="window.location.href='./casestudies.html#mtls';">Learn More</button>
+            </div>
+        </div>
+
+
+<hr class="grey-section-divider">
+
+        <div class="row p-b-70 m-t-50" style="position: relative;">
+            <!--            Heading -->
+            <div class="p-b-30 grey-section-icon">
+                <img alt="Athenz components explanation" src="images/icons/aws-circle.png">
+            </div>
+            <div class="col-11-12 p-b-30 p-t-10">
+                <span class="rubik-medium grey-section-heading">AWS Temporary Credentials for On-Prem services</span>
+            </div>
+
+            <!--            content -->
+            <div class="xs-col-12-12 sm-col-10-12 col-5-12">
+                <div class="row">
+                    <!--            Heading -->
+                    <div class="col-12-12 p-b-30">
+                        <p class="rubik-regular"><strong>Problem</strong><br></p>
+                        <p class="rubik-regular">How to securely access AWS services from on-prem data centers without using static credentials defined in AWS IAM?</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <!--            Heading -->
+                    <div class="col-12-12 p-b-30">
+                        <p class="rubik-regular"><strong>Solution</strong><br></p>
+                        <p class="rubik-regular">Services running in on-prem data can use their Athenz issued identity x.509 certificates to request AWS temporary credentials from Athenz Token Service running in AWS.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="xs-col-2-12  sm-col-10-12  col-1-12">
+            </div>
+            <!--            image -->
+            <div class="xs-col-12-12  sm-col-10-12  col-6-12">
+                <img src="images/aws-home@3x.png">
+            </div>
+            <div class="col-12-12 p-b-30 learn-more-button">
+                <button class="button is-large is-outline"
+                        onclick="window.location.href='./casestudies.html#aws';">Learn More</button>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>
+
+
+<!--        SUCCESS STORIES-->
+<div class="container-full p-t-45 p-b-75 success-stories-container">
+
+
+    <div class="container" style="margin: 50px auto;">
+        <h1 class="rubik-bold"> Success Stories</h1>
+    </div>
+    <div class="carousel" data-flickity='{"wrapAround" : true, "autoPlay": true}'>
+
+        <div class="carousel-cell container">
+            <div class=" ccell">
+                <div class="row p-t-60 p-b-60">
+                    <div class="xs-col-4-12 sm-col-2-12 md-col-1-12 col-1-12 ccell-img">
+                        <img alt="gil photo" src="images/icons/ashley-circle.png"
+                             style="max-width: 70px; vertical-align: middle">
+                    </div>
+                    <div class="xs-col-7-12 sm-col-5-12 md-col-3-12 col-3-12">
+                        <p class="rubik-regular"><strong>Ashley Wolf</strong><br>Director of Open Source<br>Verizon Media</p>
+                    </div>
+                    <div class="xs-col-12-12 sm-col-12-12 md-col-7-12 col-7-12">
+                        <p class="rubik-regular-success">"Athenz has helped secure our workloads in an extremely scalable manner."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+<div class="carousel-cell container">
+    <div class=" ccell">
+
+        <div class="row p-t-60 p-b-60">
+            <div class="xs-col-4-12 sm-col-2-12 md-col-1-12 col-1-12 ccell-img">
+                <img alt="suresh photo" src="images/icons/suresh-circle.png"
+                     style="max-width: 70px; vertical-align: middle">
+            </div>
+            <div class="xs-col-7-12 sm-col-5-12 md-col-3-12 col-3-12">
+                <p class="rubik-regular"><strong>Suresh Visvanathan</strong><br>Sr. Director, Software Dev Engineering<br>Verizon Media</p>
+            </div>
+            <div class="xs-col-12-12 sm-col-12-12 md-col-7-12 col-7-12">
+                <p class="rubik-regular-success">"Athenz enriches Kubernetes workload security at Yahoo/Verizon Media with fine-grain Role-based access control (RBAC) and service authentication. Athenz's rich set of APIs integrates seamlessly with any Container-as-a-Service Platform."</p>
+            </div>
         </div>
     </div>
-</main>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
-<script>
-    $(function () {
-        const LOGO_SHOW_SCROLL_TOP = 165;
-        $(window).scroll(function () {
-            // set distance user needs to scroll before we start fadeIn
-            if ($(this).scrollTop() > LOGO_SHOW_SCROLL_TOP) {
-                $('.navbar-brand').removeClass('invisible')
-            } else {
-                $('.navbar-brand').addClass('invisible')
-            }
-        });
-        if ($(window).scrollTop() > LOGO_SHOW_SCROLL_TOP) {
-            $('.navbar-brand').removeClass('invisible')
+</div>
+
+
+
+<div class="carousel-cell container">
+    <div class="ccell">
+
+        <div class="row p-t-60 p-b-60">
+            <div class="xs-col-4-12 sm-col-2-12 md-col-1-12 col-1-12 ccell-img">
+                <img alt="chris photo" src="images/icons/chris-circle.png"
+                     style="max-width: 70px; vertical-align: middle">
+            </div>
+            <div class="xs-col-7-12 sm-col-5-12 md-col-3-12 col-3-12">
+                <p class="rubik-regular"><strong>Chris Tatsuya Yano</strong><br>Platform Developer<br>Yahoo! Japan</p>
+            </div>
+            <div class="xs-col-12-12 sm-col-12-12 md-col-7-12 col-7-12">
+                <p class="rubik-regular-success">"Since Athenz is secure and extensible, Yahoo! Japan is using Athenz on large scale workloads and contributing to the product."</p>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+
+<!--getting started-->
+<div class="getting-started container-full">
+    <div class="container">
+        <div class="row updates-container" style="margin: 50px auto;">
+            <p class="rubik-bold f-s-36">Getting Started</p>
+            <p class="rubik-regular m-t-20 l-h-34 f-s-24">Explore the Athenz documentation and create a test development environment with ZMS (Athenz Management Service), ZTS (Athenz Token Service), and UI services. For reference implementation, visit the Java Client/Servlet or Go Client/Server example documentation.</p>
+            <a href="https://yahoo.github.io/athenz/" target="_blank"><button class="button is-solid rubik-regular m-t-24" style="background-color: #058ae5; height: 44px; min-width: 150px;">Documentation</button></a>
+        </div>
+    </div>
+</div>
+
+
+<!--footer-->
+<div class="container-full custom-footer">
+    <div class="container">
+        <div class="row p-t-70">
+            <div class="xs-col-4-12 col-2-12 p-b-30">
+                <ul>
+                    <li class="rubik-bold f-s-16">Community</li>
+<!--                    <li class="rubik-regular"><a href="https://athenz-rbac.tumblr.com/">Blog</a></li>-->
+                    <li class="rubik-regular"><a href="https://join.slack.com/t/athenz/shared_invite/zt-6c13sdfn-Lilbb~v2FYOkM7hZLGqF6A" target="_blank">Slack</a></li>
+                    <li class="rubik-regular"><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="xs-col-4-12 col-2-12 p-b-30">
+                <ul>
+                    <li class="rubik-bold f-s-16">Contribute</li>
+                    <li class="rubik-regular"><a href="https://github.com/yahoo/athenz" target="_blank">Github</a></li>
+                    <li class="rubik-regular"><a href="https://github.com/yahoo/athenz/issues" target="_blank">Suggest</a></li>
+                </ul>
+            </div>
+            <div class="xs-col-4-12 col-2-12 p-b-30">
+                <ul>
+                    <li class="rubik-bold f-s-16">Resources</li>
+                    <li class="rubik-regular"><a href="https://yahoo.github.io/athenz/" target="_blank">Documentation</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<svg height="0">
+    <defs>
+        <mask id="mask-linear">
+            <rect width="400" height="300" fill="url(#l1)"></rect>
+            <linearGradient id="l1" x1="0" y1="0" x2="0" y2="1">
+                <stop stop-color="white" offset="0%"/>
+                <stop stop-color="black" offset="30%"/>
+                <stop stop-color="white" offset="100%"/>
+            </linearGradient>
+        </mask>
+        <filter id="filtre1">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
+        </filter>
+        <filter id="filtre2">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+        </filter>
+    </defs>
+</svg>
+</body>
+<script type="text/javascript">
+    document.getElementById('navToggle').addEventListener("click", toggleMenu);
+    function toggleMenu() {
+        document.getElementById('navMenuContent').classList.toggle("is-active");
+    }
+    $( document ).ready(function() {
+        $('#watch-video').on('click', () => showVideo());
+        function showVideo() {
+            $('body').css({overflow: 'hidden'});
+            let videoPlayer = $("#videoPlayer");
+            let videoIframe = videoPlayer.find("iframe")[0];
+            videoIframe.src = videoIframe.getAttribute("data-url");
+            videoPlayer.css({zIndex: 1000});
+            videoPlayer.fadeIn(300);
+            videoPlayer.click(function(){
+                $('body').css({overflow: 'auto'});
+                videoPlayer.fadeOut(300, function(){
+                    videoIframe.src = '';
+                });
+            });
         }
     });
 </script>
-</body>
 </html>

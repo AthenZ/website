@@ -1,320 +1,264 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%">
 <head>
     <meta charset="UTF-8">
-    <title>Athenz IO Docs</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="assets/favicon.ico"/>
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Athenz IO - Explore</title>
+
+    <meta property="og:title" content="Open source platform for X.509 certificate based service authentication and fine grained access control in dynamic infrastructures">
+    <meta property="og:description" content="Open source platform for X.509 certificate based service authentication and fine grained access control in dynamic infrastructures">
+    <meta property="og:type" content="website"
+    ><meta property="og:url" content="https://athenz.io/">
+    <meta property="og:site_name" content="Athenz">
+    <meta itemprop=name content="Open source platform for X.509 certificate based service authentication and fine grained access control in dynamic infrastructures">
+    <meta itemprop=description content="Open source platform for X.509 certificate based service authentication and fine grained access control in dynamic infrastructures">
+    <meta name=twitter:card content="summary">
+    <meta name=twitter:title content="Open source platform for X.509 certificate based service authentication and fine grained access control in dynamic infrastructures">
+    <meta name=twitter:description content="Open source platform for X.509 certificate based service authentication and fine grained access control in dynamic infrastructures">
+    <meta name=twitter:image content="https://athenz.io/images/icons/athenz-twitter-icon.jpg">
+    <meta name=twitter:image:alt content="Athenz">
+    <meta property="og:image" content="/images/icons/athenz-icon.png">
+
+    <link rel="icon" href="images/icons/favicon.ico"/>
+    <link href="https://cdn.jsdelivr.net/gh/denali-design/denali-css@2.0.2/css/denali.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/denali-design/denali-icon-font@1.6.0/dist/denali-icon-font.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
-<body>
-<div class="container-fluid fixed-top ">
-    <nav class="navbar  navbar-dark navbar-expand-lg justify-content-between pt-lg-0 pb-lg-0">
-        <a class="navbar-brand logo visible" href="index.html">
-            <img src="assets/athenz_logo.png" alt="Athenz Logo" style="width: 140px; height: 38px;">
+<body class="denali-default-theme">
+
+<div class="nav rubik-regular">
+    <div class="nav-left">
+
+        <a onclick="toggleTabsLeft()" tabindex="0" id="toggleTab" class="nav-icon hide-small-desktop-up-custom">
+            <i class="d-icon d-menu-hamburger"></i>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars"
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbars">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="explore.html">Explore</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://yahoo.github.io/athenz/">Documentation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://athenz-rbac.tumblr.com/">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="https://join.slack.com/t/athenz/shared_invite/zt-6c13sdfn-Lilbb~v2FYOkM7hZLGqF6A">Slack</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/yahoo/athenz">Github</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
+
+        <a href="/">
+            <img class="nav-brand" src="images/icons/athenz-icon.png" alt="Athenz logo" />
+        </a>
+        <div class="float-right hide-small-desktop-up-custom">
+            <a class="nav-icon" id="navToggle"><i class="d-icon d-more-vertical"></i></a>
         </div>
-    </nav>
+    </div>
+    <div class="nav-responsive" id="navMenuContent">
+        <div class="nav-center">
+            <a class="nav-item" href="explore.html#model">Explore</a>
+            <a class="nav-item" href="casestudies.html#hybrid">Case Studies</a>
+            <a class="nav-item" href="https://yahoo.github.io/athenz/" target="_blank">Documentation <i class="d-icon d-external is-sub is-extrasmall"></i></a>
+<!--            <a class="nav-item" href="https://athenz-rbac.tumblr.com/" target="_blank">Blog <i class="d-icon d-external is-sub is-extrasmall"></i></a>-->
+            <!--            <a class="nav-item" href="">Community</a>-->
+        </div>
+        <div class="nav-right">
+            <a href="https://join.slack.com/t/athenz/shared_invite/zt-6c13sdfn-Lilbb~v2FYOkM7hZLGqF6A" target="_blank" class="nav-icon">
+                <i class="d-icon d-slack"></i>
+                <span class="icon-name">Slack</span>
+            </a>
+            <a href="https://github.com/yahoo/athenz" target="_blank" class="nav-icon">
+                <i class="d-icon d-github"></i>
+                <span class="icon-name">Github</span>
+            </a>
+            <a href="contact.html" class="nav-icon">
+                <i class="d-icon d-help-circle"></i>
+                <span class="icon-name">Contact</span>
+            </a>
+        </div>
+    </div>
 </div>
-<div class="container-fluid header">
-    <div class="container pt-5 pb-1">
-        <div class="row">
-            <div class="col-md-auto col-lg-8 col-xl-6">
-                <div class="heading mt-5 mb-4">
-                    <h2>Explore Athenz</h2>
+
+<div class="flex h-minus-nav" >
+    <div id="toggleTabsLeft" class="tabs is-primary is-vertical tablet-down-hide-left-custom">
+        <ul>
+            <li><a onclick="toggleTabActive('model')" class="is-active tablinks model" href="#model">Data Model</a></li>
+            <li><a onclick="toggleTabActive('authn')" class="tablinks authn" href="#authn">Service Authentication</a></li>
+            <li><a onclick="toggleTabActive('authz')" class="tablinks authz" href="#authz">Role Based Authorization</a></li>
+            <li><a onclick="toggleTabActive('zerotrust')" class="tablinks zerotrust" href="#zerotrust">Zero Trust Principles</a></li>
+        </ul>
+    </div>
+    <div id="container" class="overflow-y-auto flex-auto case-studies-container">
+        <!-- Model -->
+        <div id="model" class="tabcontent" >
+            <div class="container-full p-t-30">
+                <p class="rubik-bold f-s-28">Data Model</p>
+                <div>
+                    <img class="" src="images/athenz-data-model.png" alt="" style="max-height: 450px;"/>
+                </div>
+                <div class="case-study-content">
+                    <p class="p-t-30 rubik-bold f-s-20">Domain</p>
+                    <p class="rubik-regular">Domains are namespaces, strictly partitioned, providing a context for authoritative statements to be made about the entities it contains.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Policies</p>
+                    <p class="rubik-regular">To implement access control, we have policies in our domain that govern the use of our resources. A policy is a set of assertions (rules) about granting or denying an operation/action on a resource.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Resources</p>
+                    <p class="rubik-regular">Resources aren't explicitly modeled in Athenz, they are referred to by name. A resource is something that is "owned" and controlled in a specific domain by the provider service.
+                    Each service using Athenz for authorization is responsible for defining their own resources and referencing them in their policy rules (assertions).</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Actions</p>
+                    <p class="rubik-regular">Similar to resources, actions are also controlled by the service owners. Athenz does not own nor enforce the actions on resources.
+                        They are only referenced in policies and used by Athenz to carry out authorization checks and return the appropriate response to the caller.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Roles</p>
+                    <p class="rubik-regular">A role can be thought of as a group and anyone in the group can assume the role that takes a particular action. Every policy assertion describes what can be done by a role.</p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Principal</p>
+                    <p class="rubik-regular p-b-30">The actors in Athenz that can assume a role are called principals. These principals are authenticated and can be users or services. Athenz currently provides service identity and authentication support.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Authn -->
+        <div id="authn" class="tabcontent" >
+            <div class="container-full p-t-30">
+                <p class="rubik-bold f-s-28">Service Authentication</p>
+                <div>
+                    <img class="" src="images/hybrid-environment-home@2x.png" alt="" style="max-height: 450px;"/>
+                </div>
+                <div class="case-study-content">
+                    <p class="rubik-regular">Athenz provides secure identity in the form of short-lived X.509 certificates for every workload or service deployed in private (e.g. OpenStack, Kubernetes)
+                        or public cloud (e.g. AWS EC2, ECS, Fargate, Lambda). Using these X.509 certificates, clients and services establish secure connections and through mutual TLS authentication verify each other's identity.
+                        The service identity certificates are only valid for 30 days and the service identity agents (SIA) part of those frameworks automatically refresh them daily.
+                        The term service within Athenz is more generic than a traditional service. A service identity could represent a command, job, daemon, workflow, as well as both an application client and application service.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- AuthZ -->
+        <div id="authz" class="tabcontent" >
+            <div class="container-full p-t-30">
+                <p class="rubik-bold f-s-28">Role-Based Authorization (RBAC)</p>
+                <div>
+                    <img class="" src="images/mtls-home@3x.png" alt="" style="max-height: 450px;"/>
+                </div>
+                <div class="case-study-content">
+                    <p class="rubik-regular">Once the client is authenticated with its X.509 certificate, the service can then check if the given client is authorized to carry out the requested action.
+                        Athenz provides fine-grained role-based access control (RBAC) support for a centralized management system with support
+                        for control-plane access control decisions and a decentralized enforcement mechanism suitable for data-plane access control decisions.
+                        It also provides a delegated management model that supports multi-tenant and self-service concepts. <a href="https://yahoo.github.io/athenz/auth_flow/" target="_blank">Learn More</a></p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Centralized Access Control</p>
+                    <p class="rubik-regular">A traditional centralized mechanism works as expected for services that are not dealing with the decentralized authorization: the server with resources
+                        can simply ask the Athenz Management Service directly about access, passing the service identity and resource/action information to get a simple boolean answer.
+                        It is suitable for provisioning and configuration use cases where latency for authorization checks is not important.
+                        <a href="https://yahoo.github.io/athenz/auth_flow/#centralized-access-control-control-plane" target="_blank">Learn More</a></p>
+
+                    <p class="p-t-30 rubik-bold f-s-20">Decentralized Access Control</p>
+                    <p class="rubik-regular">A more interesting scenario introduces the local policy engine (ZPE), and a few supporting changes. Rather than directly asking for an access check with a principal identity,
+                        the identity is instead used to get an access token, and that is presented to the target service until it expires. This mechanism allows a service to make a completely local access check against ZPE,
+                        given an access token and locally cached policies. <a href="https://yahoo.github.io/athenz/auth_flow/#decentralized-access-control-data-plane" target="_blank">Learn More</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zero Trust -->
+        <div id="zerotrust" class="tabcontent" >
+            <div class="container-full p-t-30">
+                <p class="rubik-bold f-s-28">Zero Trust Principles</p>
+                <div class="case-study-content">
+                    <p class="rubik-regular">Zero Trust is a security model to defend against modern day adversaries.
+                        In a nutshell, the Zero Trust model stipulates that in order to establish or maintain a certain level of security,
+                        any and all trust amongst participating entities has to be explicit and limited , not implicit or inherited and broad or persistent.
+                        That is, by default a system or service will not trust any user or client. While this does not sound particularly revolutionary,
+                        it does overturn a few decades of common practice of perimeter security ("hard shell, soft internals") whereby a privileged position inside a network,
+                        such as being on a VPN, implicitly grants access to various services.
+                        Instead, in a Zero Trust network, the underlying assumption is that enterprise users, devices, applications, and data are at constant risk of compromise both from external as well as internal threats.
+                        As part of a typical Attack Life Cycle, after an initial compromise, attackers will attempt to move laterally within the target infrastructure.
+                        As a result, the surrounding environment of even "internal" services must be assumed to be hostile, untrusted.
+                        Zero Trust treats the surrounding environment as inherently untrusted, thereby mandating the application of a few core principles:</p>
+                    <p class="p-t-30 rubik-bold f-s-20">Traffic Encryption</p>
+                    <p class="rubik-regular">All network traffic between services, clients, and components must be encrypted in transit, as all networks are considered hostile.</p>
+                    <p class="p-t-30 rubik-bold f-s-20">AuthN and AuthZ</p>
+                    <p class="rubik-regular">Always authenticate and always verify authorization all the way up to an appropriate Root Of Trust.</p>
+                    <p class="p-t-30 rubik-bold f-s-20">Dynamic trust</p>
+                    <p class="rubik-regular">Any given entity is trusted only for a limited duration, and only when it is expected (e.g., authenticated and authorized). Trust may also be context-dependent.</p>
+                    <p class="p-t-30 rubik-bold f-s-20">Least Privilege</p>
+                    <p class="rubik-regular"> Entities—whether people, organizations, hardware, or software—are granted only the least privilege required to accomplish their current tasks. Any particular grant of privilege ends when the task for which it was granted ends. New tasks require new grants of privilege.</p>
 
                 </div>
             </div>
-            <div class="col-md-auto col-lg-4 col-xl-6"></div>
         </div>
-    </div>
-</div>
-<div class="container">
-    <div class="about pl-sm-0">
-        <div class="row">
-            <div class="col-md">
-                <h4 class="heading">About</h4>
-                <p class="details">Athenz is an open source platform for X.509 certificate based service authentication
-                    and fine grained access control in dynamic infrastructures. It provides a generalized model for
-                    authorized
-                    service providers to launch other services identified by their X.509 certificates in an authorized
-                    way through
-                    a callback-based verification model. Athenz also supports role-based authorization (RBAC) for
-                    provisioning and
-                    configuration (centralized authorization) use cases as well as serving/runtime (decentralized
-                    authorization)
-                    use cases to handle on-box enforcement.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid grey-background">
-    <div class="container service-auth-container">
-        <div class="row grey-background">
-            <div class="col-lg-5 col-12 col-sm-12">
-                <div class="service-auth">
-                    <h4 class="heading">Service Authentication</h4>
-                    <p class="details">
-                        Athenz provides secure identity in the form of short-lived
-                        <a href="https://en.wikipedia.org/wiki/X.509">X.509 certificates</a>
-                        for every workload or service deployed in private (e.g. OpenStack, Kubernetes, Screwdriver) or
-                        public
-                        cloud (e.g. AWS EC2, ECS, Fargate, Lambda). Using these X.509 certificates, clients and services
-                        establish secure connections and through mutual TLS authentication verify each other's identity.
-                        The service identity certificates are only valid for 30 days and the service identity agents
-                        (SIA)
-                        part of those frameworks automatically refresh them daily. The term service within Athenz is
-                        more
-                        generic than a traditional service. A service identity could represent a command, job, daemon,
-                        workflow,
-                        as well as both an application client and application service.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-7 col-12 col-sm-12">
-                <div class="service-auth-img"></div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="rbac">
-        <div class="row">
-            <div class="col-md">
-                <h4 class="heading">Role-Based Authorization (RBAC)</h4>
-                <p class="details">
-                    Once the client is authenticated with its X.509 certificate, the service can then check if
-                    the given client is authorized to carry out the requested action. Athenz provides fine-grained
-                    role-based access control (RBAC) support for a centralized management system with support for
-                    control-plane access control decisions and a decentralized enforcement mechanism suitable for
-                    data-plane access control decisions. It also provides a delegated management model that supports
-                    multi-tenant and self-service concepts.
-                    <a href="https://yahoo.github.io/athenz/auth_flow/">Learn More</a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg">
-            <div class="architecture">
-                <h5 class="heading">Centralized Access Control</h5>
-                <p class="details">
-                    A traditional centralized mechanism works as expected for
-                    services that are not dealing with the decentralized authorization:
-                    the server with resources can simply ask the ZMS directly about access,
-                    passing the service identity and resource/action information to get a simple boolean answer.
-                    It is suitable for provisioning and configuration use cases where latency for authorization
-                    checks is not important.
-                    <a href="https://yahoo.github.io/athenz/auth_flow/#centralized-access-control-control-plane">Learn
-                        More</a>
-                </p>
-            </div>
-            <div class="thumbnail">
-                <div class="row centralized-explore"></div>
-            </div>
-        </div>
-        <div class="col-lg">
-            <div class="architecture">
-                <h5 class="heading">Decentralized Access Control</h5>
-                <p class="details">
-                    A more interesting scenario introduces the local policy engine (ZPE),
-                    and a few supporting changes. Rather than directly asking for an access
-                    check with a principal identity, the identity is instead used to get a ZToken,
-                    and that is presented to the target service until it expires. This mechanism
-                    allows a service to make a completely local access check against ZPE, given
-                    a ZToken and locally cached policies.
-                    <a href="https://yahoo.github.io/athenz/auth_flow/#decentralized-access-control-data-plane">Learn
-                        More</a>
-                </p>
-            </div>
-            <div class="thumbnail">
-                <div class="row decentralized-explore"></div>
-            </div>
 
+        <!--footer-->
+        <div class="container-full custom-footer">
+            <div class="container">
+                <div class="row p-t-70">
+                    <div class="xs-col-4-12 col-2-12 p-b-30">
+                        <ul>
+                            <li class="rubik-bold f-s-16">Community</li>
+<!--                            <li class="rubik-regular"><a href="https://athenz-rbac.tumblr.com/">Blog</a></li>-->
+                            <li class="rubik-regular"><a href="https://join.slack.com/t/athenz/shared_invite/zt-6c13sdfn-Lilbb~v2FYOkM7hZLGqF6A" target="_blank">Slack</a></li>
+                            <li class="rubik-regular"><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="xs-col-4-12 col-2-12 p-b-30">
+                        <ul>
+                            <li class="rubik-bold f-s-16">Contribute</li>
+                            <li class="rubik-regular"><a href="https://github.com/yahoo/athenz" target="_blank">Github</a></li>
+                            <li class="rubik-regular"><a href="https://github.com/yahoo/athenz/issues" target="_blank">Suggest</a></li>
+                        </ul>
+                    </div>
+                    <div class="xs-col-4-12 col-2-12 p-b-30">
+                        <ul>
+                            <li class="rubik-bold f-s-16">Resources</li>
+                            <li class="rubik-regular"><a href="https://yahoo.github.io/athenz/" target="_blank">Documentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
+
 </div>
-<div class="container-fluid grey-background">
-    <div class="container">
-        <div class="row grey-background aws-temp-container">
-            <div class="col-lg-5 col-12">
-                <div class="aws-temp mt-lg-0">
-                    <h4 class="heading">AWS Temporary Credentials Support</h4>
-                    <p class="details">
-                        When working with AWS, Athenz provides support to access AWS services from on-prem
-                        services by using AWS temporary credentials rather than static credentials. Athenz
-                        ZTS server can be used to request AWS temporary credentials for configured AWS IAM
-                        roles.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-7 col-12">
-                <div class="aws-temp-img ml-lg-0"></div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container data-model-container">
-    <h4 class="box-title heading">Data Model</h4>
-    <div class="row">
-        <div class="col-12 col-lg-5">
-            <div class="d-flex">
-                <div>
-                    <img src="assets/domain.png" alt="">
-                    <hr>
-                </div>
-                <div class="desc">
-                    <h4 class="heading">Domain</h4>
-                    <p class="details">Domains are namespaces, strictly partitioned, providing a context for
-                        authoritative statements to
-                        be
-                        made about the entities it contains.</p>
-                </div>
-            </div>
-            <div class="d-flex">
-                <div>
-                    <img src="assets/policies.png" alt="">
-                    <hr>
-                </div>
-                <div class="desc">
-                    <h4 class="heading">Policies</h4>
-                    <p class="details">To implement access control, we have policies in our domain that govern
-                        the use
-                        of our resources.
-                        A
-                        policy is set of assertions (rules) about granting or denying an operation/action on a
-                        resource.</p>
-                </div>
-            </div>
-            <div class="d-flex">
-                <div>
-                    <img src="assets/roles.png" alt="">
-                    <hr>
-                </div>
-                <div class="desc">
-                    <h4 class="heading">Roles</h4>
-                    <p class="details">A role can be thought of as a group and anyone in the group can assume
-                        the role
-                        that takes a
-                        particular action. Every policy assertion describes what can be done by a role.</p>
-                </div>
-            </div>
-            <div class="d-flex">
-                <div><img src="assets/principle.png" alt=""></div>
-                <div class="desc">
-                    <h4 class="heading">Principle</h4>
-                    <p class="details">The actors in Athenz that can assume a role are called principals. These
-                        principals are
-                        authenticated and can be users or services. Athenz currently provides service identity
-                        and
-                        authentication support.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-lg-7 data-model">
-            <div class="data-model-img"></div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid grey-background">
-    <div class="container">
-        <div class="row">
-            <div class="col-md">
-                <div class="getting-started">
-                    <h4 class="heading">Getting Started</h4>
-                    <p class="details">Explore the Athenz documentation and easily create a test development
-                        environment with
-                        <a href="https://yahoo.github.io/athenz/setup_zms_prod/">ZMS (Athenz Management
-                            Service)</a>,
-                        <a href="https://yahoo.github.io/athenz/setup_zts_prod/">ZTS (Athenz Token
-                            Service)</a>,
-                        and
-                        <a href="https://yahoo.github.io/athenz/setup_ui_prod/">UI</a>
-                        services. For reference implementation, visit the
-                        <a href="https://yahoo.github.io/athenz/example_java_centralized_access/">Java
-                            Client/Servlet</a> or
-                        <a href="https://yahoo.github.io/athenz/example_go_centralized_access/">Go
-                            Client/Server</a>
-                        example documentation.</p>
-                    <p>
-                        <a href="https://yahoo.github.io/athenz/"
-                           class="btn btn-outline-primary btn-documentation">Documentation</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row footer">
-        <div class="col-md col-12 col-sm-12">
-            <div class="row footer-lists pl-sm-0">
-                <div class="col-md col-xs col-sm">
-                    <h6>COMMUNITY</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="https://athenz-rbac.tumblr.com">Blog</a></li>
-                        <li>
-                            <a href="https://join.slack.com/t/athenz/shared_invite/zt-6c13sdfn-Lilbb~v2FYOkM7hZLGqF6A">Slack</a>
-                        </li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-md col-xs col-sm">
-                    <h6>CONTRIBUTE</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="https://github.com/yahoo/athenz">GitHub</a></li>
-                        <li><a href="https://github.com/yahoo/athenz/issues">Suggest</a></li>
-                    </ul>
-                </div>
-                <div class="col-md col-xs col-sm">
-                    <h6>RESOURCES</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="">Getting Started</a></li>
-                        <li><a href="https://yahoo.github.io/athenz/">Documentation</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-md"></div>
-    </div>
-</div>
-</main>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
+
+
 </body>
+<script type="text/javascript">
+    function toggleTabsLeft() {
+        let toggleTabsLeft = document.getElementById("toggleTabsLeft");
+        toggleTabsLeft.classList.toggle('tablet-down-toggle-tabs-left-custom');
+    };
+    document.getElementById('navToggle').addEventListener("click", toggleMenu);
+
+    function toggleMenu() {
+        document.getElementById('navMenuContent').classList.toggle("is-active");
+    }
+
+    function toggleTabActive(tabName) {
+
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace("is-active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        var activeTab = document.getElementsByClassName(tabName);
+        activeTab[0].classList.add("is-active");
+
+        let toggleTabsLeft = document.getElementById("toggleTabsLeft");
+        if(toggleTabsLeft.classList.contains("tablet-down-toggle-tabs-left-custom")) {
+            toggleTabsLeft.classList.toggle('tablet-down-toggle-tabs-left-custom');
+        }
+    }
+
+
+    document.addEventListener("DOMContentLoaded", function(){
+        // Handler when the DOM is fully loaded
+        function onHashChange() {
+            var hash = window.location.hash;
+            if (hash) {
+                toggleTabActive(hash.split('#')[1]);
+            }
+        }
+
+        window.addEventListener('hashchange', onHashChange, false);
+        onHashChange();
+    });
+
+</script>
 </html>
