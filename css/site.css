@@ -86,6 +86,7 @@
     background: #fff;
     overflow: hidden;
     transition: 300ms;
+    box-shadow: 0px 2px 20px 6px rgba(0, 0, 0, 0.06);
 }
 .updates > p.title {
     color: #058ae5;
@@ -101,15 +102,9 @@
     padding: 20px 30px;
 }
 .updates .action {
-    color: #058ae5;
     padding: 20px 30px;
     transition: 300ms;
     font-weight: 700;
-}
-.updates:hover {
-    box-shadow: 0px 2px 20px 6px rgba(0, 0, 0, 0.06);
-}
-.updates:hover .action {
     background: #058ae5;
     color: #fff;
 }
@@ -603,5 +598,8 @@ code, pre {
 @media (min-width: 300px) and (max-width: 1059px) {
     .learn-more-button .button, .getting-started .button, .getting-started a {
         width: 100%;
+    }
+    .card-container div {
+        padding-top: 20px;
     }
 }
