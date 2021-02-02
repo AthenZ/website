@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" style="height: 100%">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-93621L5G27"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-93621L5G27');
+    </script>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -46,7 +55,7 @@
         <div class="nav-center">
             <a class="nav-item" href="explore.html#model">Explore</a>
             <a class="nav-item" href="casestudies.html#hybrid">Case Studies</a>
-            <a class="nav-item" href="https://yahoo.github.io/athenz/" target="_blank">Documentation <i class="d-icon d-external is-sub is-extrasmall"></i></a>
+            <a class="nav-item" href="https://athenz.github.io/athenz/" target="_blank">Documentation <i class="d-icon d-external is-sub is-extrasmall"></i></a>
             <a class="nav-item" href="comparison.html#general">Comparison</a>
         </div>
         <div class="nav-right">
@@ -138,18 +147,18 @@
                         <p class="rubik-regular">Once the client is authenticated with its X.509 certificate, the service can then check if the given client is authorized to carry out the requested action.
                             Athenz provides fine-grained role-based access control (RBAC) support for a centralized management system with support
                             for control-plane access control decisions and a decentralized enforcement mechanism suitable for data-plane access control decisions.
-                            It also provides a delegated management model that supports multi-tenant and self-service concepts. <a href="https://yahoo.github.io/athenz/auth_flow/" target="_blank">Learn More</a></p>
+                            It also provides a delegated management model that supports multi-tenant and self-service concepts. <a href="https://athenz.github.io/athenz/auth_flow/" target="_blank">Learn More</a></p>
 
                         <p class="p-t-30 rubik-bold f-s-20">Centralized Access Control</p>
                         <p class="rubik-regular">A traditional centralized mechanism works as expected for services that are not dealing with the decentralized authorization: the server with resources
                             can simply ask the Athenz Management Service directly about access, passing the service identity and resource/action information to get a simple boolean answer.
                             It is suitable for provisioning and configuration use cases where latency for authorization checks is not important.
-                            <a href="https://yahoo.github.io/athenz/auth_flow/#centralized-access-control-control-plane" target="_blank">Learn More</a></p>
+                            <a href="https://athenz.github.io/athenz/auth_flow/#centralized-access-control-control-plane" target="_blank">Learn More</a></p>
 
                         <p class="p-t-30 rubik-bold f-s-20">Decentralized Access Control</p>
                         <p class="rubik-regular">A more interesting scenario introduces the local policy engine (ZPE), and a few supporting changes. Rather than directly asking for an access check with a principal identity,
                             the identity is instead used to get an access token, and that is presented to the target service until it expires. This mechanism allows a service to make a completely local access check against ZPE,
-                            given an access token and locally cached policies. <a href="https://yahoo.github.io/athenz/auth_flow/#decentralized-access-control-data-plane" target="_blank">Learn More</a></p>
+                            given an access token and locally cached policies. <a href="https://athenz.github.io/athenz/auth_flow/#decentralized-access-control-data-plane" target="_blank">Learn More</a></p>
                     </div>
                 </div>
             </div>
@@ -204,7 +213,7 @@
                     <div class="xs-col-4-12 col-2-12 p-b-30">
                         <ul>
                             <li class="rubik-bold f-s-16">Resources</li>
-                            <li class="rubik-regular"><a href="https://yahoo.github.io/athenz/" target="_blank">Documentation</a></li>
+                            <li class="rubik-regular"><a href="https://athenz.github.io/athenz/" target="_blank">Documentation</a></li>
                         </ul>
                     </div>
                 </div>
