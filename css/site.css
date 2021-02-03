@@ -841,6 +841,7 @@ code, pre {
     }
     .cncf-logo {
         width: 40%;
+        height: 70%;
         padding-top: 20px;
     }
     .cncf-container div {
@@ -859,6 +860,7 @@ code, pre {
     }
     .cncf-logo {
         width: 90%;
+        height: 90%;
         padding: 20px;
     }
     .cncf-container div {
